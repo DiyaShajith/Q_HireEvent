@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/pageview.dart';
+import 'package:qhire_event/view/registerview/login.dart';
 
-import 'package:qhire_event/view/getstarted/startpage1.dart';
-import 'package:qhire_event/view/getstarted/startpage2.dart';
-import 'package:qhire_event/view/getstarted/startpage3.dart';
-import 'package:qhire_event/view/welcomescreen/screen1.dart';
-import 'package:qhire_event/view/welcomescreen/screen2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Pageviewcustom(),
+      home:  Login(),
     );
   }
 }

@@ -19,14 +19,11 @@ class _Startpage2State extends State<Startpage2> {
       body: Column(
         children: [
           const Spacer(),
-          Center(
-            child: Image.asset("assets/2.png"),
-          ),
+          Image.asset("assets/2.png"),
           const SizedBox(
             height: 50,
           ),
           Container(
-            height: size.height * 0.4,
             width: double.infinity,
             decoration: BoxDecoration(
               color: CustomColor.scaffoldbg,
@@ -40,9 +37,9 @@ class _Startpage2State extends State<Startpage2> {
                   height: 10,
                 ),
                 SmoothPageIndicator(
-                    controller: PageController(), // PageController
+                    controller: widget.pageController, // PageController
                     count: 3,
-                    effect: ExpandingDotsEffect(
+                    effect: const ExpandingDotsEffect(
                         activeDotColor:
                             CustomColor.textfieldbg), // your preferred effect
                     onDotClicked: (index) {}),
@@ -84,7 +81,11 @@ class _Startpage2State extends State<Startpage2> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16)),
                           backgroundColor: CustomColor.textfieldbg),
-                      onPressed: () {},
+                      onPressed: () {
+                        widget.pageController.nextPage(
+                            duration: Duration(milliseconds: 5),
+                            curve: Curves.easeIn);
+                      },
                       child: const Text(
                         "Next",
                         style: TextStyle(
@@ -99,7 +100,7 @@ class _Startpage2State extends State<Startpage2> {
                 SizedBox(
                   width: 350,
                   height: 60,
-                  child: ElevatedButton(
+                  child: TextButton(
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12)),

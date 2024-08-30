@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
+import 'package:qhire_event/view/getstarted/startpage2.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Startpage1 extends StatefulWidget {
@@ -19,14 +20,12 @@ class _Startpage1State extends State<Startpage1> {
       body: Column(
         children: [
           const Spacer(),
-          Center(
-            child: Image.asset("assets/1.png"),
-          ),
+          Image.asset("assets/1.png"),
           const SizedBox(
             height: 50,
           ),
           Container(
-            height: size.height * 0.4,
+            // height: size.height * 0.4,
             width: double.infinity,
             decoration: BoxDecoration(
               color: CustomColor.scaffoldbg,
@@ -40,9 +39,9 @@ class _Startpage1State extends State<Startpage1> {
                   height: 10,
                 ),
                 SmoothPageIndicator(
-                    controller: PageController(), // PageController
+                    controller: widget.pageController, // PageController
                     count: 3,
-                    effect: ExpandingDotsEffect(
+                    effect: const ExpandingDotsEffect(
                         activeDotColor:
                             CustomColor.textfieldbg), // your preferred effect
                     onDotClicked: (index) {}),
@@ -84,7 +83,11 @@ class _Startpage1State extends State<Startpage1> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16)),
                           backgroundColor: CustomColor.textfieldbg),
-                      onPressed: () {},
+                      onPressed: () {
+                        widget.pageController.nextPage(
+                            duration: Duration(milliseconds: 5),
+                            curve: Curves.easeIn);
+                      },
                       child: const Text(
                         "Next",
                         style: TextStyle(
@@ -99,7 +102,7 @@ class _Startpage1State extends State<Startpage1> {
                 SizedBox(
                   width: 350,
                   height: 60,
-                  child: ElevatedButton(
+                  child: TextButton(
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12)),

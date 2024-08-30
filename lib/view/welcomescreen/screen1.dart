@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
@@ -41,7 +40,6 @@ class _Screen1State extends State<Screen1> {
                 const SizedBox(
                   height: 50,
                 ),
-                const Spacer(),
                 const Text(
                   "Hello!",
                   style: TextStyle(
@@ -64,7 +62,7 @@ class _Screen1State extends State<Screen1> {
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 100,
                 ),
                 SizedBox(
                   width: 350,
@@ -77,29 +75,9 @@ class _Screen1State extends State<Screen1> {
                           backgroundColor: CustomColor.scaffoldbg),
                       onPressed: () {},
                       child: const Text(
-                        "I\'m a Job Seeker",
+                        "I'm a Job Seeker",
                         style: TextStyle(
                             color: CustomColor.textfieldbg,
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold),
-                      )),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                  width: 350,
-                  height: 60,
-                  child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                          backgroundColor: CustomColor.textfieldbg),
-                      onPressed: () {},
-                      child: const Text(
-                        "I\'m a Recruiter",
-                        style: TextStyle(
-                            color: CustomColor.scaffoldbg,
                             fontSize: 22,
                             fontWeight: FontWeight.bold),
                       )),

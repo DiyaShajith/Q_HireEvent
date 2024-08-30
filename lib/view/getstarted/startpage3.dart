@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
+import 'package:qhire_event/view/welcomescreen/screen1.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Startpage3 extends StatefulWidget {
-  const Startpage3({super.key,required this.pageController});
-   final PageController pageController;
+  const Startpage3({super.key, required this.pageController});
+  final PageController pageController;
 
   @override
   State<Startpage3> createState() => _Startpage3State();
@@ -19,14 +20,11 @@ class _Startpage3State extends State<Startpage3> {
       body: Column(
         children: [
           const Spacer(),
-          Center(
-            child: Image.asset("assets/3.png"),
-          ),
+          Image.asset("assets/3.png"),
           const SizedBox(
             height: 50,
           ),
           Container(
-            height: size.height * 0.4,
             width: double.infinity,
             decoration: BoxDecoration(
               color: CustomColor.scaffoldbg,
@@ -40,9 +38,9 @@ class _Startpage3State extends State<Startpage3> {
                   height: 10,
                 ),
                 SmoothPageIndicator(
-                    controller: PageController(), // PageController
+                    controller: widget.pageController, // PageController
                     count: 3,
-                    effect: ExpandingDotsEffect(
+                    effect: const ExpandingDotsEffect(
                         activeDotColor:
                             CustomColor.textfieldbg), // your preferred effect
                     onDotClicked: (index) {}),
@@ -84,7 +82,10 @@ class _Startpage3State extends State<Startpage3> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16)),
                           backgroundColor: CustomColor.textfieldbg),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Screen1()));
+                      },
                       child: const Text(
                         "Get started!",
                         style: TextStyle(
