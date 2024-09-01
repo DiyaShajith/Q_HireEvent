@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
+import 'package:qhire_event/view/registerview/registerfield.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -202,13 +203,18 @@ class _LoginState extends State<Login> {
                               fontSize: 16,
                               fontWeight: FontWeight.w500),
                         ),
-                        const Text(
-                          " Register",
-                          style: TextStyle(
-                              color: CustomColor.blackprimary,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
-                        )
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Registerfield()));
+                            },
+                            child: const Text("Register",
+                                style: TextStyle(
+                                    color: CustomColor.blackprimary,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold)))
                       ],
                     )
                   ],
