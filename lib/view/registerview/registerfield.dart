@@ -81,12 +81,23 @@ class _RegisterfieldState extends State<Registerfield> {
                       ),
                       TextField(
                         decoration: InputDecoration(
-                            label: const Text(
-                              "Full name",
-                              style: TextStyle(
+                            label: RichText(
+                              text: const TextSpan(
+                                text: "Full name",
+                                style: TextStyle(
                                   color: Color.fromARGB(255, 87, 86, 86),
                                   fontSize: 16,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' *',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
@@ -99,12 +110,23 @@ class _RegisterfieldState extends State<Registerfield> {
                       ),
                       TextField(
                         decoration: InputDecoration(
-                            label: const Text(
-                              "Mobile Number",
-                              style: TextStyle(
+                            label: RichText(
+                              text: const TextSpan(
+                                text: "Mobile Number",
+                                style: TextStyle(
                                   color: Color.fromARGB(255, 87, 86, 86),
                                   fontSize: 16,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' *',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
@@ -117,12 +139,23 @@ class _RegisterfieldState extends State<Registerfield> {
                       ),
                       TextField(
                         decoration: InputDecoration(
-                            label: const Text(
-                              "Email",
-                              style: TextStyle(
+                            label: RichText(
+                              text: const TextSpan(
+                                text: "Email",
+                                style: TextStyle(
                                   color: Color.fromARGB(255, 87, 86, 86),
                                   fontSize: 16,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' *',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
@@ -135,76 +168,23 @@ class _RegisterfieldState extends State<Registerfield> {
                       ),
                       TextField(
                         decoration: InputDecoration(
-                            label: const Text(
-                              "Gender",
-                              style: TextStyle(
+                            label: RichText(
+                              text: const TextSpan(
+                                text: "Gender",
+                                style: TextStyle(
                                   color: Color.fromARGB(255, 87, 86, 86),
                                   fontSize: 16,
-                                  fontWeight: FontWeight.w500),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
-                                  color: Colors.grey,
-                                ))),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                            suffixIcon: const Icon(
-                              Icons.keyboard_arrow_down,
-                              size: 35,
-                              color: CustomColor.blackprimary,
-                            ),
-                            label: const Text(
-                              "Qualification",
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
-                                  color: Colors.grey,
-                                ))),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                            suffixIcon: const Icon(
-                              Icons.keyboard_arrow_down,
-                              size: 35,
-                              color: CustomColor.blackprimary,
-                            ),
-                            label: const Text(
-                              "Experience",
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
-                                  color: Colors.grey,
-                                ))),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                            label: const Text(
-                              "Linkedin Profile",
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' *',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
@@ -222,12 +202,23 @@ class _RegisterfieldState extends State<Registerfield> {
                               size: 35,
                               color: CustomColor.blackprimary,
                             ),
-                            label: const Text(
-                              "District",
-                              style: TextStyle(
+                            label: RichText(
+                              text: const TextSpan(
+                                text: "Qualification",
+                                style: TextStyle(
                                   color: Color.fromARGB(255, 87, 86, 86),
                                   fontSize: 16,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' *',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
@@ -245,12 +236,120 @@ class _RegisterfieldState extends State<Registerfield> {
                               size: 35,
                               color: CustomColor.blackprimary,
                             ),
-                            label: const Text(
-                              "Area of Expertise",
-                              style: TextStyle(
+                            label: RichText(
+                              text: const TextSpan(
+                                text: "Experience",
+                                style: TextStyle(
                                   color: Color.fromARGB(255, 87, 86, 86),
                                   fontSize: 16,
-                                  fontWeight: FontWeight.w500),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' *',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(
+                                  color: Colors.grey,
+                                ))),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            label: RichText(
+                              text: const TextSpan(
+                                text: "Linkedin Profile",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 87, 86, 86),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' *',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(
+                                  color: Colors.grey,
+                                ))),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            suffixIcon: const Icon(
+                              Icons.keyboard_arrow_down,
+                              size: 35,
+                              color: CustomColor.blackprimary,
+                            ),
+                            label: RichText(
+                              text: const TextSpan(
+                                text: "District",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 87, 86, 86),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' *',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide(
+                                  color: Colors.grey,
+                                ))),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextField(
+                        decoration: InputDecoration(
+                            suffixIcon: const Icon(
+                              Icons.keyboard_arrow_down,
+                              size: 35,
+                              color: CustomColor.blackprimary,
+                            ),
+                            label: RichText(
+                              text: const TextSpan(
+                                text: "Area of Expertise",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 87, 86, 86),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' *',
+                                    style: TextStyle(
+                                      color: Colors.red,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
@@ -263,12 +362,23 @@ class _RegisterfieldState extends State<Registerfield> {
                       ),
                       Row(
                         children: [
-                          const Text(
-                            "Upload Resume",
-                            style: TextStyle(
+                          RichText(
+                            text: const TextSpan(
+                              text: "Upload Photograph",
+                              style: TextStyle(
                                 color: Color.fromARGB(255, 70, 69, 69),
                                 fontSize: 18,
-                                fontWeight: FontWeight.w600),
+                                fontWeight: FontWeight.w600,
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: ' *',
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                           const Text(
                             " (Max file :3Mb)",
@@ -313,6 +423,38 @@ class _RegisterfieldState extends State<Registerfield> {
                             )
                           ],
                         ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          RichText(
+                            text: const TextSpan(
+                              text: "Upload Resume",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 70, 69, 69),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: ' *',
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const Text(
+                            " (Max file :3Mb)",
+                            style: TextStyle(
+                                color: CustomColor.blackprimary,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ],
                       ),
                       const SizedBox(
                         height: 10,
@@ -368,6 +510,9 @@ class _RegisterfieldState extends State<Registerfield> {
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             )),
+                      ),
+                      const SizedBox(
+                        height: 50,
                       ),
                     ],
                   ),
