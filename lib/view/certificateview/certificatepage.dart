@@ -74,7 +74,7 @@ class _CertificatepageState extends State<Certificatepage> {
                             fontWeight: FontWeight.w500),
                       ),
                       const Text(
-                        "Certificate",
+                        "Certificates",
                         style: TextStyle(
                             color: CustomColor.blackprimary,
                             fontSize: 19.5,
