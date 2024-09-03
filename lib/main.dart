@@ -3,6 +3,7 @@ import 'package:qhire_event/constants/pageview.dart';
 import 'package:qhire_event/view/eventview/event.dart';
 import 'package:qhire_event/view/eventview/eventcancelled.dart';
 import 'package:qhire_event/view/eventview/eventupcoming.dart';
+import 'package:qhire_event/view/jobview/job.dart';
 import 'package:qhire_event/view/jobview/jobpage.dart';
 import 'package:qhire_event/view/registerview/login.dart';
 import 'package:qhire_event/view/registerview/registerfield.dart';

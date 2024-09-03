@@ -26,31 +26,29 @@ class _JobpageState extends State<Jobpage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-    return Scaffold(
+    return Scaffold( appBar: AppBar(
+        backgroundColor: CustomColor.scaffoldbg,
+        leading: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.arrow_back,
+              color: CustomColor.blackprimary,
+              size: 32,
+            )),
+        title: Text(
+          "Saved Jobs",
+          style: TextStyle(
+              color: CustomColor.blackprimary,
+              fontSize: 25,
+              fontWeight: FontWeight.bold),
+        ),
+      ),
       backgroundColor: CustomColor.scaffoldbg,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: CustomColor.blackprimary,
-                  ),
-                ),
-                const Text(
-                  "Saved Jobs",
-                  style: TextStyle(
-                    color: CustomColor.blackprimary,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
+            
             const SizedBox(
               height: 20,
             ),
@@ -59,9 +57,9 @@ class _JobpageState extends State<Jobpage> {
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    blurRadius: 20,
-                    spreadRadius: 1,
+                    color: Colors.grey.withOpacity(0.1),
+                    blurRadius: 40,
+                    spreadRadius: 0.5,
                     offset: const Offset(0, 1),
                   ),
                 ],

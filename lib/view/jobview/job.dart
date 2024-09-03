@@ -12,54 +12,60 @@ class _JobState extends State<Job> {
   final List<String> image = [
     "assets/microsoft.png",
     "assets/twitter.png",
-    "assets/facebook.png"
+    "assets/facebook.png",
+    "assets/apple.png"
   ];
-  final List<String> title = ["Microsoft", "Twitter", "Facebook"];
+  final List<String> title = ["Microsoft", "Twitter", "Facebook", "Apple"];
   final List<String> subtitle = [
+    "Product Designer",
     "Product Designer",
     "Product Designer",
     "Product Designer"
   ];
-  final List<String> leadingicon = ["assets/save.png"];
+  final List<Icon> leadingicon = [
+    Icon(
+      Icons.bookmark_border_outlined,
+      color: CustomColor.textfieldbg,
+      size: 32,
+    ),
+    Icon(Icons.bookmark_border_outlined,
+        color: CustomColor.textfieldbg, size: 32),
+    Icon(Icons.bookmark_border_outlined,
+        color: CustomColor.textfieldbg, size: 32),
+    Icon(Icons.bookmark_border_outlined,
+        color: CustomColor.textfieldbg, size: 32)
+  ];
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: CustomColor.scaffoldbg,
+        title: const Text(
+          "Jobs",
+          style: TextStyle(
+              color: CustomColor.blackprimary,
+              fontSize: 25,
+              fontWeight: FontWeight.bold),
+        ),
+      ),
       backgroundColor: CustomColor.scaffoldbg,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: CustomColor.blackprimary,
-                  ),
-                ),
-                const Text(
-                  "Saved Jobs",
-                  style: TextStyle(
-                    color: CustomColor.blackprimary,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Container(
               width: size.width,
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    blurRadius: 20,
-                    spreadRadius: 1,
+                    color: Colors.grey.withOpacity(0.1),
+                    blurRadius: 40,
+                    spreadRadius: 0.5,
                     offset: const Offset(0, 1),
                   ),
                 ],
@@ -87,6 +93,46 @@ class _JobState extends State<Job> {
                     filled: true,
                     prefixIcon: const Icon(
                       Icons.search,
+                      color: CustomColor.textfieldbg,
+                      size: 28,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              width: size.width,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.1),
+                    blurRadius: 40,
+                    spreadRadius: 0.5,
+                    offset: const Offset(0, 1),
+                  ),
+                ],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide.none,
+                    ),
+                    hintText: "Bangalore, Karnataka",
+                    hintStyle: const TextStyle(
+                      color: CustomColor.uploadbg,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    fillColor: CustomColor.scaffoldbg,
+                    filled: true,
+                    prefixIcon: const Icon(
+                      Icons.location_on,
                       color: CustomColor.textfieldbg,
                       size: 28,
                     ),
@@ -143,11 +189,7 @@ class _JobState extends State<Job> {
                       ],
                     ),
                     const Spacer(),
-                    Image.asset(
-                      leadingicon[0],
-                      width: 24,
-                      height: 24,
-                    ),
+                    leadingicon[index],
                   ],
                 ),
               ),
