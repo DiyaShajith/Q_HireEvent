@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/pageview.dart';
+import 'package:qhire_event/view/eventview/eventupcoming.dart';
 import 'package:qhire_event/view/jobview/jobpage.dart';
 import 'package:qhire_event/view/registerview/login.dart';
 import 'package:qhire_event/view/registerview/registerfield.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Jobpage(),
+      home: Eventupcoming(),
     );
   }
 }

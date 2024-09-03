@@ -97,7 +97,7 @@ class _JobpageState extends State<Jobpage> {
               ),
             ),
             const SizedBox(
-              height: 50,
+              height: 20,
             ),
             ListView.separated(
               padding: const EdgeInsets.all(16),
@@ -116,8 +116,8 @@ class _JobpageState extends State<Jobpage> {
                   children: [
                     Image.asset(
                       image[index],
-                      width: 55,
-                      height: 55,
+                      width: 56,
+                      height: 56,
                     ),
                     const SizedBox(width: 16),
                     Column(
@@ -128,7 +128,7 @@ class _JobpageState extends State<Jobpage> {
                           style: const TextStyle(
                             color: CustomColor.blackprimary,
                             fontSize: 18,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                         const SizedBox(
