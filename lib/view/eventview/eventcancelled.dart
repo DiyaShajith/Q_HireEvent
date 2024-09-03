@@ -18,7 +18,7 @@ class _EventcancelledState extends State<Eventcancelled> {
           "Event",
           style: TextStyle(
               color: CustomColor.blackprimary,
-              fontSize: 22,
+              fontSize: 25,
               fontWeight: FontWeight.bold),
         ),
         backgroundColor: CustomColor.scaffoldbg,
@@ -84,13 +84,13 @@ class _EventcancelledState extends State<Eventcancelled> {
                 height: size.height * 0.2,
                 decoration: BoxDecoration(
                     color: CustomColor.scaffoldbg,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(15),
                     border: Border.all(
                         color: CustomColor.textfieldbg1, width: 0.5)),
                 child: Row(
                   children: [
                     Image.asset("assets/event1.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Column(
@@ -129,18 +129,18 @@ class _EventcancelledState extends State<Eventcancelled> {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Container(
-                padding: EdgeInsets.all(3),
+                padding: const EdgeInsets.all(3),
                 width: size.width,
                 height: size.height * 0.2,
                 decoration: BoxDecoration(
                     color: CustomColor.scaffoldbg,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(15),
                     border: Border.all(
                         color: CustomColor.textfieldbg1, width: 0.5)),
                 child: Row(
                   children: [
                     Image.asset("assets/event3.png"),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Column(

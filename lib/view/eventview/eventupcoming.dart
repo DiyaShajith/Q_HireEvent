@@ -18,7 +18,7 @@ class _EventupcomingState extends State<Eventupcoming> {
           "Event",
           style: TextStyle(
               color: CustomColor.blackprimary,
-              fontSize: 22,
+              fontSize: 25,
               fontWeight: FontWeight.bold),
         ),
         backgroundColor: CustomColor.scaffoldbg,
@@ -83,7 +83,7 @@ class _EventupcomingState extends State<Eventupcoming> {
                 height: size.height * 0.2,
                 decoration: BoxDecoration(
                     color: CustomColor.scaffoldbg,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(15),
                     border: Border.all(
                         color: CustomColor.textfieldbg1, width: 0.5)),
                 child: Row(
@@ -133,7 +133,7 @@ class _EventupcomingState extends State<Eventupcoming> {
                 height: size.height * 0.2,
                 decoration: BoxDecoration(
                     color: CustomColor.scaffoldbg,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(15),
                     border: Border.all(
                         color: CustomColor.textfieldbg1, width: 0.5)),
                 child: Row(
@@ -183,7 +183,7 @@ class _EventupcomingState extends State<Eventupcoming> {
                 height: size.height * 0.2,
                 decoration: BoxDecoration(
                     color: CustomColor.scaffoldbg,
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(15),
                     border: Border.all(
                         color: CustomColor.textfieldbg1, width: 0.5)),
                 child: Row(
