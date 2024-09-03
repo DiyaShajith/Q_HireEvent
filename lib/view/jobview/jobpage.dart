@@ -99,67 +99,65 @@ class _JobpageState extends State<Jobpage> {
             const SizedBox(
               height: 50,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ListView.separated(
-                itemBuilder: (context, index) => Container(
-                  padding: const EdgeInsets.all(16),
-                  width: size.width,
-                  height: size.height * 0.1,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(
-                      color: CustomColor.textfieldbg1,
-                      width: 0.5,
+            ListView.separated(
+              padding: const EdgeInsets.all(16),
+              itemBuilder: (context, index) => Container(
+                padding: const EdgeInsets.all(16),
+                width: size.width,
+                height: size.height * 0.11,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(
+                    color: CustomColor.textfieldbg1,
+                    width: 0.5,
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Image.asset(
+                      image[index],
+                      width: 55,
+                      height: 55,
                     ),
-                  ),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        image[index],
-                        width: 55,
-                        height: 55,
-                      ),
-                      const SizedBox(width: 16),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            title[index],
-                            style: const TextStyle(
-                              color: CustomColor.blackprimary,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                            ),
+                    const SizedBox(width: 16),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title[index],
+                          style: const TextStyle(
+                            color: CustomColor.blackprimary,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
                           ),
-                          const SizedBox(
-                            height: 5,
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          subtitle[index],
+                          style: const TextStyle(
+                            color: CustomColor.uploadbg,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400,
                           ),
-                          Text(
-                            subtitle[index],
-                            style: const TextStyle(
-                              color: CustomColor.uploadbg,
-                              fontSize: 15,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Spacer(),
-                      Image.asset(
-                        leadingicon[0],
-                        width: 24,
-                        height: 24,
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                    const Spacer(),
+                    Image.asset(
+                      leadingicon[0],
+                      width: 24,
+                      height: 24,
+                    ),
+                  ],
                 ),
-                separatorBuilder: (context, index) => const SizedBox(
-                  height: 20,
-                ),
-                shrinkWrap: true,
-                itemCount: image.length,
               ),
+              separatorBuilder: (context, index) => const SizedBox(
+                height: 20,
+              ),
+              shrinkWrap: true,
+              itemCount: image.length,
             ),
           ],
         ),
