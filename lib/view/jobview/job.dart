@@ -58,20 +58,20 @@ class _JobState extends State<Job> {
             const SizedBox(
               height: 10,
             ),
-            Container(
-              width: size.width,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.1),
-                    blurRadius: 40,
-                    spreadRadius: 0.5,
-                    offset: const Offset(0, 1),
-                  ),
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                width: size.width,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.1),
+                      blurRadius: 40,
+                      spreadRadius: 0.5,
+                      offset: const Offset(0, 1),
+                    ),
+                  ],
+                ),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -103,20 +103,20 @@ class _JobState extends State<Job> {
             const SizedBox(
               height: 10,
             ),
-            Container(
-              width: size.width,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.1),
-                    blurRadius: 40,
-                    spreadRadius: 0.5,
-                    offset: const Offset(0, 1),
-                  ),
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                width: size.width,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.1),
+                      blurRadius: 40,
+                      spreadRadius: 0.5,
+                      offset: const Offset(0, 1),
+                    ),
+                  ],
+                ),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -142,6 +142,17 @@ class _JobState extends State<Job> {
             ),
             const SizedBox(
               height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 150),
+              child: const Text("Find Your Job Today",
+                  style: TextStyle(
+                      color: CustomColor.blackprimary,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold)),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             ListView.separated(
               padding: const EdgeInsets.all(16),

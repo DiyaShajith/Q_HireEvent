@@ -9,7 +9,6 @@ class Jobpage extends StatefulWidget {
 }
 
 class _JobpageState extends State<Jobpage> {
-  
   final List<String> image = [
     "assets/microsoft.png",
     "assets/twitter.png",
@@ -26,7 +25,8 @@ class _JobpageState extends State<Jobpage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-    return Scaffold( appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         backgroundColor: CustomColor.scaffoldbg,
         leading: IconButton(
             onPressed: () {},
@@ -48,24 +48,23 @@ class _JobpageState extends State<Jobpage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            
             const SizedBox(
               height: 20,
             ),
-            Container(
-              width: size.width,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.1),
-                    blurRadius: 40,
-                    spreadRadius: 0.5,
-                    offset: const Offset(0, 1),
-                  ),
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(
+                width: size.width,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.1),
+                      blurRadius: 40,
+                      spreadRadius: 0.5,
+                      offset: const Offset(0, 1),
+                    ),
+                  ],
+                ),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
