@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/pageview.dart';
+import 'package:qhire_event/view/certificateview/certificatepage.dart';
 import 'package:qhire_event/view/eventview/event.dart';
 import 'package:qhire_event/view/eventview/eventcancelled.dart';
 import 'package:qhire_event/view/eventview/eventupcoming.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Qualification(),
+      home: Certificatepage(),
     );
   }
 }
