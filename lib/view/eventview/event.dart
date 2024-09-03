@@ -87,12 +87,14 @@ class _EventState extends State<Event> {
                 const SizedBox(
                   width: 10,
                 ),
-                const Text(
-                  "Tech Hall, Silicon Valley, Map and Directions",
-                  style: TextStyle(
-                      color: CustomColor.uploadbg,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold),
+                Expanded(
+                  child: const Text(
+                    "Tech Hall, Silicon Valley, Map and Directions",
+                    style: TextStyle(
+                        color: CustomColor.uploadbg,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
                 )
               ],
             ),
@@ -103,7 +105,7 @@ class _EventState extends State<Event> {
               // mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const Icon(
-                  Icons.access_alarm,
+                  Icons.access_time_filled_outlined,
                   color: CustomColor.textfieldbg,
                   size: 32,
                 ),

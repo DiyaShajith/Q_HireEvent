@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
 
-class Jobpage extends StatefulWidget {
-  const Jobpage({super.key});
+class Job extends StatefulWidget {
+  const Job({super.key});
 
   @override
-  State<Jobpage> createState() => _JobpageState();
+  State<Job> createState() => _JobState();
 }
 
-class _JobpageState extends State<Jobpage> {
-  
+class _JobState extends State<Job> {
   final List<String> image = [
     "assets/microsoft.png",
     "assets/twitter.png",
@@ -22,7 +21,6 @@ class _JobpageState extends State<Jobpage> {
     "Product Designer"
   ];
   final List<String> leadingicon = ["assets/save.png"];
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
