@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
 
-class Eventupcoming extends StatefulWidget {
-  const Eventupcoming({super.key});
+class Eventcancelled extends StatefulWidget {
+  const Eventcancelled({super.key});
 
   @override
-  State<Eventupcoming> createState() => _EventupcomingState();
+  State<Eventcancelled> createState() => _EventcancelledState();
 }
 
-class _EventupcomingState extends State<Eventupcoming> {
+class _EventcancelledState extends State<Eventcancelled> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
@@ -36,13 +36,15 @@ class _EventupcomingState extends State<Eventupcoming> {
                     padding: const EdgeInsets.all(15),
                     width: size.width * 0.45,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18),
-                        color: CustomColor.textfieldbg),
+                      border: Border.all(
+                          color: CustomColor.textfieldbg, width: 1.5),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
                     child: const Center(
                       child: Text(
                         "Upcoming",
                         style: TextStyle(
-                            color: CustomColor.scaffoldbg,
+                            color: CustomColor.blackprimary,
                             fontSize: 16,
                             fontWeight: FontWeight.w500),
                       ),
@@ -55,15 +57,14 @@ class _EventupcomingState extends State<Eventupcoming> {
                     padding: const EdgeInsets.all(15),
                     width: size.width * 0.45,
                     decoration: BoxDecoration(
-                      border: Border.all(
-                          color: CustomColor.textfieldbg, width: 1.5),
+                      color: CustomColor.textfieldbg,
                       borderRadius: BorderRadius.circular(18),
                     ),
                     child: const Center(
                       child: Text(
                         "Cancelled",
                         style: TextStyle(
-                            color: CustomColor.blackprimary,
+                            color: CustomColor.scaffoldbg,
                             fontSize: 16,
                             fontWeight: FontWeight.w500),
                       ),
@@ -89,7 +90,7 @@ class _EventupcomingState extends State<Eventupcoming> {
                 child: Row(
                   children: [
                     Image.asset("assets/event1.png"),
-                    const SizedBox(
+                    SizedBox(
                       width: 15,
                     ),
                     Column(
@@ -128,57 +129,7 @@ class _EventupcomingState extends State<Eventupcoming> {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Container(
-                padding: const EdgeInsets.all(3),
-                width: size.width,
-                height: size.height * 0.2,
-                decoration: BoxDecoration(
-                    color: CustomColor.scaffoldbg,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                        color: CustomColor.textfieldbg1, width: 0.5)),
-                child: Row(
-                  children: [
-                    Image.asset("assets/event2.png"),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          "Tech Conference",
-                          style: TextStyle(
-                              color: CustomColor.blackprimary,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        const SizedBox(height: 5), // Increased spacing
-                        const Text(
-                          "Join industry leaders in tech for a day\nof insightful discussions and\nnetworking.",
-                          style: TextStyle(
-                              color: CustomColor.blackprimary,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        const SizedBox(height: 5), // Increased spacing
-                        const Text(
-                          "Aug 15 2024",
-                          style: TextStyle(
-                              color: CustomColor.blackprimary,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500),
-                        )
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Container(
-                padding: const EdgeInsets.all(3),
+                padding: EdgeInsets.all(3),
                 width: size.width,
                 height: size.height * 0.2,
                 decoration: BoxDecoration(
@@ -189,7 +140,7 @@ class _EventupcomingState extends State<Eventupcoming> {
                 child: Row(
                   children: [
                     Image.asset("assets/event3.png"),
-                    const SizedBox(
+                    SizedBox(
                       width: 15,
                     ),
                     Column(
