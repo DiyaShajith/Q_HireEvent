@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:qhire_event/constants/bottomnavigationpage.dart';
 import 'package:qhire_event/constants/custom_color.dart';
+import 'package:qhire_event/view/homeview/homepage.dart';
 
 class Registerfield extends StatefulWidget {
   const Registerfield({super.key});
@@ -502,7 +504,13 @@ class _RegisterfieldState extends State<Registerfield> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(16)),
                                 backgroundColor: CustomColor.textfieldbg),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          Bottomnavigationpage()));
+                            },
                             child: const Text(
                               "Register",
                               style: TextStyle(
@@ -512,7 +520,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             )),
                       ),
                       const SizedBox(
-                        height: 50,
+                        height: 100,
                       ),
                     ],
                   ),

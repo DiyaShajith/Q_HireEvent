@@ -8,7 +8,7 @@ import 'package:qhire_event/view/profileview/profilepage.dart';
 import 'package:qhire_event/view/resumeview/resume.dart';
 import 'package:qhire_event/view/skillview/skill.dart';
 import 'package:qhire_event/view/certificateview/certificatepage.dart';
-import 'package:qhire_event/view/eventview/event.dart';
+import 'package:qhire_event/view/eventview/eventdetails.dart';
 import 'package:qhire_event/view/eventview/eventcancelled.dart';
 import 'package:qhire_event/view/eventview/eventupcoming.dart';
 import 'package:qhire_event/view/jobview/job.dart';

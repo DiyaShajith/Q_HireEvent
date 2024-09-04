@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
+import 'package:qhire_event/view/registerview/login.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
@@ -73,7 +74,10 @@ class _Screen1State extends State<Screen1> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
                           backgroundColor: CustomColor.scaffoldbg),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Login()));
+                      },
                       child: const Text(
                         "I'm a Job Seeker",
                         style: TextStyle(

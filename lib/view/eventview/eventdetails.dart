@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
 
-class Event extends StatefulWidget {
-  const Event({super.key});
+class Eventdetails extends StatefulWidget {
+  const Eventdetails({super.key});
 
   @override
-  State<Event> createState() => _EventState();
+  State<Eventdetails> createState() => _EventdetailsState();
 }
 
-class _EventState extends State<Event> {
+class _EventdetailsState extends State<Eventdetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

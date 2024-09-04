@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
 import 'package:qhire_event/view/editview/editpage.dart';
-import 'package:qhire_event/view/eventview/event.dart';
+import 'package:qhire_event/view/eventview/eventdetails.dart';
 import 'package:qhire_event/view/eventview/event_view.dart';
 import 'package:qhire_event/view/eventview/eventcancelled.dart';
 import 'package:qhire_event/view/eventview/eventupcoming.dart';
