@@ -49,9 +49,11 @@ class _HomepageState extends State<Homepage> {
               padding: const EdgeInsets.all(16),
               width: size.width,
               height: size.height * 0.25,
-              decoration: BoxDecoration(
-                border: Border.all(color: CustomColor.textfieldbg1, width: 0.8),
-                borderRadius: const BorderRadius.only(
+              decoration: const BoxDecoration(
+                border: Border(
+                    bottom: BorderSide(
+                        color: CustomColor.textfieldbg1, width: 0.5)),
+                borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30),
                 ),
@@ -138,7 +140,7 @@ class _HomepageState extends State<Homepage> {
                         Padding(
                           padding: const EdgeInsets.all(6),
                           child: Container(
-                            padding: const EdgeInsets.all(8),
+                            padding: const EdgeInsets.all(10),
                             width: size.width * 0.35,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
@@ -165,7 +167,7 @@ class _HomepageState extends State<Homepage> {
                         Padding(
                           padding: const EdgeInsets.all(16),
                           child: Container(
-                            padding: const EdgeInsets.all(8),
+                            padding: const EdgeInsets.all(10),
                             width: size.width * 0.3,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
@@ -192,7 +194,7 @@ class _HomepageState extends State<Homepage> {
                         Padding(
                           padding: const EdgeInsets.all(16),
                           child: Container(
-                            padding: const EdgeInsets.all(8),
+                            padding: const EdgeInsets.all(10),
                             width: size.width * 0.3,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
@@ -223,10 +225,10 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(16),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -984,7 +986,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                   Align(
                     alignment: Alignment.topLeft,
-                    child:const Text(
+                    child: const Text(
                       "Bangalore",
                       style: TextStyle(
                           color: CustomColor.uploadbg,
@@ -998,7 +1000,7 @@ class _HomepageState extends State<Homepage> {
                   Row(
                     children: [
                       Container(
-                        padding:const  EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         width: size.width * 0.25,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),

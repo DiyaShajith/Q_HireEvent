@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
+import 'package:qhire_event/view/certificateview/certificatepage.dart';
+import 'package:qhire_event/view/editview/editpage.dart';
+import 'package:qhire_event/view/jobview/jobpage.dart';
+import 'package:qhire_event/view/qualificationview/qualification.dart';
+import 'package:qhire_event/view/resumeview/resume.dart';
+import 'package:qhire_event/view/skillview/skill.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -88,13 +94,21 @@ class ProfileView extends StatelessWidget {
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 20),
+                                  fontSize: 19),
                             ),
                             const Spacer(),
-                            Icon(
-                              Icons.keyboard_arrow_right,
-                              color: CustomColor.blackprimary,
-                              size: 40,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Editpage()));
+                              },
+                              child: Icon(
+                                Icons.keyboard_arrow_right,
+                                color: CustomColor.blackprimary,
+                                size: 40,
+                              ),
                             ),
                           ],
                         ),
@@ -119,13 +133,21 @@ class ProfileView extends StatelessWidget {
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 20),
+                                  fontSize: 19),
                             ),
                             const Spacer(),
-                            Icon(
-                              Icons.keyboard_arrow_right,
-                              color: CustomColor.blackprimary,
-                              size: 40,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Qualification()));
+                              },
+                              child: Icon(
+                                Icons.keyboard_arrow_right,
+                                color: CustomColor.blackprimary,
+                                size: 40,
+                              ),
                             ),
                           ],
                         ),
@@ -151,13 +173,22 @@ class ProfileView extends StatelessWidget {
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 20),
+                                  fontSize: 19),
                             ),
                             const Spacer(),
-                            Icon(
-                              Icons.keyboard_arrow_right,
-                              color: CustomColor.blackprimary,
-                              size: 40,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            Certificatepage()));
+                              },
+                              child: Icon(
+                                Icons.keyboard_arrow_right,
+                                color: CustomColor.blackprimary,
+                                size: 40,
+                              ),
                             ),
                           ],
                         ),
@@ -182,13 +213,21 @@ class ProfileView extends StatelessWidget {
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 20),
+                                  fontSize: 19),
                             ),
                             const Spacer(),
-                            Icon(
-                              Icons.keyboard_arrow_right,
-                              color: CustomColor.blackprimary,
-                              size: 40,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Skill()));
+                              },
+                              child: Icon(
+                                Icons.keyboard_arrow_right,
+                                color: CustomColor.blackprimary,
+                                size: 40,
+                              ),
                             ),
                           ],
                         ),
@@ -213,13 +252,21 @@ class ProfileView extends StatelessWidget {
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 20),
+                                  fontSize: 19),
                             ),
                             const Spacer(),
-                            Icon(
-                              Icons.keyboard_arrow_right,
-                              color: CustomColor.blackprimary,
-                              size: 40,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Resume()));
+                              },
+                              child: Icon(
+                                Icons.keyboard_arrow_right,
+                                color: CustomColor.blackprimary,
+                                size: 40,
+                              ),
                             ),
                           ],
                         ),
@@ -245,13 +292,21 @@ class ProfileView extends StatelessWidget {
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 20),
+                                  fontSize: 19),
                             ),
                             const Spacer(),
-                            Icon(
-                              Icons.keyboard_arrow_right,
-                              color: CustomColor.blackprimary,
-                              size: 40,
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Jobpage()));
+                              },
+                              child: Icon(
+                                Icons.keyboard_arrow_right,
+                                color: CustomColor.blackprimary,
+                                size: 40,
+                              ),
                             ),
                           ],
                         ),
@@ -276,7 +331,7 @@ class ProfileView extends StatelessWidget {
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: 20),
+                                  fontSize: 19),
                             ),
                             const Spacer(),
                             Icon(
