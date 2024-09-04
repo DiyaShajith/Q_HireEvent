@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
+import 'package:qhire_event/view/eventview/eventcancelled.dart';
 
 class Eventupcoming extends StatefulWidget {
   const Eventupcoming({super.key});
@@ -51,21 +52,29 @@ class _EventupcomingState extends State<Eventupcoming> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    padding: const EdgeInsets.all(15),
-                    width: size.width * 0.45,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                          color: CustomColor.textfieldbg, width: 1.5),
-                      borderRadius: BorderRadius.circular(18),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Cancelled",
-                        style: TextStyle(
-                            color: CustomColor.blackprimary,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Eventcancelled()));
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(15),
+                      width: size.width * 0.45,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: CustomColor.textfieldbg, width: 1.5),
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          "Cancelled",
+                          style: TextStyle(
+                              color: CustomColor.blackprimary,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500),
+                        ),
                       ),
                     ),
                   ),
