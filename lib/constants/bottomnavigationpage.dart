@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
 import 'package:qhire_event/view/editview/editpage.dart';
+import 'package:qhire_event/view/eventview/event.dart';
+import 'package:qhire_event/view/eventview/event_view.dart';
 import 'package:qhire_event/view/eventview/eventcancelled.dart';
 import 'package:qhire_event/view/eventview/eventupcoming.dart';
 import 'package:qhire_event/view/homeview/homepage.dart';
@@ -26,50 +28,50 @@ class _BottomnavigationpageState extends State<Bottomnavigationpage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: pages[currentPageIndex],
-      bottomNavigationBar: NavigationBar(
-        onDestinationSelected: (int index) {
-          setState(() {
-            currentPageIndex = index;
-          });
-        },
-        indicatorColor: CustomColor.textfieldbg,
-        selectedIndex: currentPageIndex,
-        destinations: const <NavigationDestination>[
-          NavigationDestination(
-            selectedIcon: Icon(Icons.home_outlined),
-            icon: Icon(
-              Icons.home_outlined,
-              size: 32,
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        body: TabBarView(children: [
+          Homepage(),
+          EventView(),
+          Job(),
+          EventView(),
+        ]),
+        bottomNavigationBar: TabBar(
+          labelColor: CustomColor.textfieldbg,
+          indicatorColor: CustomColor.textfieldbg,
+          indicatorWeight: 5,
+          tabs: [
+            Tab(
+              icon: Icon(
+                Icons.home_filled,
+                size: 32,
+              ),
+              text: "Home",
             ),
-            label: 'Home',
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.event),
-            icon: Icon(
-              Icons.event,
-              size: 32,
+            Tab(
+              icon: Icon(
+                Icons.event,
+                size: 32,
+              ),
+              text: "Event",
             ),
-            label: 'Event',
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.work_outline),
-            icon: Icon(
-              Icons.work_outline,
-              size: 32,
+            Tab(
+              icon: Icon(
+                Icons.work,
+                size: 32,
+              ),
+              text: "Job",
             ),
-            label: 'Jobs',
-          ),
-          NavigationDestination(
-            selectedIcon: Icon(Icons.person_2_outlined),
-            icon: Icon(
-              Icons.person_2_outlined,
-              size: 32,
+            Tab(
+              icon: Icon(
+                Icons.person,
+                size: 32,
+              ),
+              text: "Profile",
             ),
-            label: 'Profile',
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

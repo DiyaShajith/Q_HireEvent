@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/bottomnavigationpage.dart';
 import 'package:qhire_event/constants/pageview.dart';
 import 'package:qhire_event/view/editview/editpage.dart';
+import 'package:qhire_event/view/getstarted/startpage1.dart';
+import 'package:qhire_event/view/homeview/homepage.dart';
 import 'package:qhire_event/view/resumeview/resume.dart';
 import 'package:qhire_event/view/skillview/skill.dart';
 import 'package:qhire_event/view/certificateview/certificatepage.dart';

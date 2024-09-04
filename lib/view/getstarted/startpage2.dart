@@ -40,6 +40,7 @@ class _Startpage2State extends State<Startpage2> {
                     controller: widget.pageController, // PageController
                     count: 3,
                     effect: const ExpandingDotsEffect(
+                        dotHeight: 10,
                         activeDotColor:
                             CustomColor.textfieldbg), // your preferred effect
                     onDotClicked: (index) {}),

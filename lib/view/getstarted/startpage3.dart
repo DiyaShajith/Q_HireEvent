@@ -41,6 +41,7 @@ class _Startpage3State extends State<Startpage3> {
                     controller: widget.pageController, // PageController
                     count: 3,
                     effect: const ExpandingDotsEffect(
+                        dotHeight: 10,
                         activeDotColor:
                             CustomColor.textfieldbg), // your preferred effect
                     onDotClicked: (index) {}),
@@ -97,6 +98,23 @@ class _Startpage3State extends State<Startpage3> {
                 const SizedBox(
                   height: 20,
                 ),
+                SizedBox(
+                  width: 350,
+                  height: 60,
+                  child: TextButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12)),
+                          backgroundColor: CustomColor.scaffoldbg),
+                      onPressed: () {},
+                      child: const Text(
+                        "",
+                        style: TextStyle(
+                            color: CustomColor.textfieldbg1,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),
+                      )),
+                )
               ],
             ),
           )
