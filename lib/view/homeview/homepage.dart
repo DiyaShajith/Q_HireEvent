@@ -127,7 +127,7 @@ class _HomepageState extends State<Homepage> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   SingleChildScrollView(
@@ -815,13 +815,225 @@ class _HomepageState extends State<Homepage> {
                     fontWeight: FontWeight.bold),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
             Container(
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(16),
               width: size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(color: CustomColor.textfieldbg1, width: 0.8),
-              ),child: Column(children: [],),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(8),
+                    width: size.width * 0.3,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        border:
+                            Border.all(color: CustomColor.buttonclr, width: 1)),
+                    child: Center(
+                      child: Text(
+                        "3 days ago",
+                        style: TextStyle(
+                            color: CustomColor.textfieldbg,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Image.asset("assets/Amazon (1).png"),
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "UI/UX Designer",
+                              style: TextStyle(
+                                  color: CustomColor.blackprimary,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            const Text(
+                              "Amazon",
+                              style: TextStyle(
+                                  color: CustomColor.uploadbg,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "California, USA.",
+                      style: TextStyle(
+                          color: CustomColor.uploadbg,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(8),
+                        width: size.width * 0.25,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                                color: CustomColor.buttonclr, width: 1)),
+                        child: Center(
+                          child: Text(
+                            "Full Time",
+                            style: TextStyle(
+                                color: CustomColor.blackprimary,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      ),
+                      const Spacer(),
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            backgroundColor: CustomColor.textfieldbg,
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            "Apply",
+                            style: TextStyle(
+                                color: CustomColor.scaffoldbg,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ))
+                    ],
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              padding: const EdgeInsets.all(16),
+              width: size.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: CustomColor.textfieldbg1, width: 0.8),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(8),
+                    width: size.width * 0.3,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        border:
+                            Border.all(color: CustomColor.buttonclr, width: 1)),
+                    child: Center(
+                      child: Text(
+                        "Today",
+                        style: TextStyle(
+                            color: CustomColor.textfieldbg,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Image.asset("assets/Uber App (1).png"),
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "UI/UX Designer",
+                              style: TextStyle(
+                                  color: CustomColor.blackprimary,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            const Text(
+                              "Uber",
+                              style: TextStyle(
+                                  color: CustomColor.uploadbg,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child:const Text(
+                      "Bangalore",
+                      style: TextStyle(
+                          color: CustomColor.uploadbg,
+                          fontSize: 22,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        padding:const  EdgeInsets.all(8),
+                        width: size.width * 0.25,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                                color: CustomColor.buttonclr, width: 1)),
+                        child: Center(
+                          child: const Text(
+                            "Internship",
+                            style: TextStyle(
+                                color: CustomColor.blackprimary,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500),
+                          ),
+                        ),
+                      ),
+                      const Spacer(),
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            backgroundColor: CustomColor.textfieldbg,
+                          ),
+                          onPressed: () {},
+                          child: Text(
+                            "Apply",
+                            style: TextStyle(
+                                color: CustomColor.scaffoldbg,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ))
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),

@@ -7,6 +7,7 @@ import 'package:qhire_event/view/eventview/eventcancelled.dart';
 import 'package:qhire_event/view/eventview/eventupcoming.dart';
 import 'package:qhire_event/view/homeview/homepage.dart';
 import 'package:qhire_event/view/jobview/job.dart';
+import 'package:qhire_event/view/profileview/profilepage.dart';
 
 class Bottomnavigationpage extends StatefulWidget {
   const Bottomnavigationpage({super.key});
@@ -21,7 +22,6 @@ class _BottomnavigationpageState extends State<Bottomnavigationpage> {
   final pages = [
     const Homepage(),
     const Eventupcoming(),
-    // const Eventcancelled(),
     const Job(),
     const Editpage(),
   ];
@@ -35,7 +35,7 @@ class _BottomnavigationpageState extends State<Bottomnavigationpage> {
           Homepage(),
           EventView(),
           Job(),
-          EventView(),
+          ProfileView(),
         ]),
         bottomNavigationBar: TabBar(
           labelColor: CustomColor.textfieldbg,
