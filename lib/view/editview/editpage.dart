@@ -11,9 +11,19 @@ class Editpage extends StatefulWidget {
 }
 
 class _EditpageState extends State<Editpage> {
+  final List<String> labels = [
+    "Full name",
+    "Email",
+    "Phone no",
+    "Age",
+    "Gender",
+    "Qualification",
+    "Skills",
+    "Experience"
+  ];
+
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     return Scaffold(
       backgroundColor: CustomColor.scaffoldbg,
       appBar: AppBar(
@@ -27,7 +37,7 @@ class _EditpageState extends State<Editpage> {
           ),
         ),
         title: const Text(
-          "Edit Profie",
+          "Edit Profile",
           style: TextStyle(
               color: CustomColor.blackprimary,
               fontSize: 22,
@@ -71,7 +81,7 @@ class _EditpageState extends State<Editpage> {
                       ),
                       child: Icon(
                         Icons.person,
-                        color: theme.colorScheme.onPrimary,
+                        color: CustomColor.scaffoldbg,
                         size: 40,
                       ),
                     ),
@@ -97,6 +107,116 @@ class _EditpageState extends State<Editpage> {
                   ),
                 )
               ],
+            ),
+            const SizedBox(height: 16),
+            ListView.separated(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: labels.length,
+              itemBuilder: (context, index) {
+                return TextField(
+                  decoration: InputDecoration(
+                    label: Text(
+                      labels[index],
+                      style: const TextStyle(
+                        color: CustomColor.uploadbg,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: BorderSide(
+                        color: CustomColor.textfieldbg1,
+                        width: 0.5,
+                      ),
+                    ),
+                  ),
+                );
+              },
+              separatorBuilder: (context, index) => const SizedBox(height: 20),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(6),
+              child: DottedBorder(
+                  borderType: BorderType.RRect,
+                  radius: const Radius.circular(12),
+                  padding: const EdgeInsets.all(5),
+                  color: CustomColor.textfieldbg,
+                  child: Container(
+                      padding: const EdgeInsets.all(6),
+                      width: double.infinity,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Drag and Drop Files",
+                            style: TextStyle(
+                                color: CustomColor.blackprimary,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Icon(
+                            Icons.cloud_upload_outlined,
+                            color: CustomColor.textfieldbg,
+                            size: 45,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          SizedBox(
+                            width: 350,
+                            height: 60,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                backgroundColor: CustomColor.textfieldbg,
+                              ),
+                              onPressed: () {},
+                              child: const Text(
+                                "Browse Files",
+                                style: TextStyle(
+                                  color: CustomColor.scaffoldbg,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ))),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              width: 350,
+              height: 50,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  backgroundColor: CustomColor.textfieldbg,
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "Update",
+                  style: TextStyle(
+                    color: CustomColor.scaffoldbg,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ),
           ],
         ),

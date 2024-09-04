@@ -52,8 +52,8 @@ class _AddqualificationState extends State<Addqualification> {
                         labels[index],
                         style: const TextStyle(
                           color: CustomColor.uploadbg,
-                          fontSize: 19,
-                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                       border: OutlineInputBorder(
