@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
 import 'package:qhire_event/view/editview/editpage.dart';
-import 'package:qhire_event/view/eventview/eventdetails.dart';
 import 'package:qhire_event/view/eventview/event_view.dart';
-import 'package:qhire_event/view/eventview/eventcancelled.dart';
 import 'package:qhire_event/view/eventview/eventupcoming.dart';
 import 'package:qhire_event/view/homeview/homepage.dart';
 import 'package:qhire_event/view/jobview/job.dart';
@@ -28,7 +26,7 @@ class _BottomnavigationpageState extends State<Bottomnavigationpage> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+    return const DefaultTabController(
       length: 4,
       child: Scaffold(
         body: TabBarView(children: [

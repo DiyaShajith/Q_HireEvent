@@ -32,27 +32,27 @@ class _EventcancelledState extends State<Eventcancelled> {
                 const SizedBox(
                   width: 15,
                 ),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       "Tech Conference",
                       style: TextStyle(
                           color: CustomColor.blackprimary,
                           fontSize: 20,
                           fontWeight: FontWeight.w500),
                     ),
-                    const SizedBox(height: 5), // Increased spacing
-                    const Text(
+                    SizedBox(height: 5), // Increased spacing
+                    Text(
                       "Join industry leaders in tech for a day\nof insightful discussions and\nnetworking.",
                       style: TextStyle(
                           color: CustomColor.blackprimary,
                           fontSize: 14,
                           fontWeight: FontWeight.w500),
                     ),
-                    const SizedBox(height: 5), // Increased spacing
-                    const Text(
+                    SizedBox(height: 5), // Increased spacing
+                    Text(
                       "Aug 15 2024",
                       style: TextStyle(
                           color: CustomColor.blackprimary,
@@ -82,27 +82,27 @@ class _EventcancelledState extends State<Eventcancelled> {
                 const SizedBox(
                   width: 15,
                 ),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       "Tech Conference",
                       style: TextStyle(
                           color: CustomColor.blackprimary,
                           fontSize: 20,
                           fontWeight: FontWeight.w500),
                     ),
-                    const SizedBox(height: 5), // Increased spacing
-                    const Text(
+                    SizedBox(height: 5), // Increased spacing
+                    Text(
                       "Join industry leaders in tech for a day\nof insightful discussions and\nnetworking.",
                       style: TextStyle(
                           color: CustomColor.blackprimary,
                           fontSize: 14,
                           fontWeight: FontWeight.w500),
                     ),
-                    const SizedBox(height: 5), // Increased spacing
-                    const Text(
+                    SizedBox(height: 5), // Increased spacing
+                    Text(
                       "Aug 15 2024",
                       style: TextStyle(
                           color: CustomColor.blackprimary,

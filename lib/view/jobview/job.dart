@@ -23,16 +23,16 @@ class _JobState extends State<Job> {
     "Product Designer"
   ];
   final List<Icon> leadingicon = [
-    Icon(
+    const Icon(
       Icons.bookmark_border_outlined,
       color: CustomColor.textfieldbg,
       size: 32,
     ),
-    Icon(Icons.bookmark_border_outlined,
+    const Icon(Icons.bookmark_border_outlined,
         color: CustomColor.textfieldbg, size: 32),
-    Icon(Icons.bookmark_border_outlined,
+    const Icon(Icons.bookmark_border_outlined,
         color: CustomColor.textfieldbg, size: 32),
-    Icon(Icons.bookmark_border_outlined,
+    const Icon(Icons.bookmark_border_outlined,
         color: CustomColor.textfieldbg, size: 32)
   ];
 
@@ -144,9 +144,9 @@ class _JobState extends State<Job> {
               const SizedBox(
                 height: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 150),
-                child: const Text("Find Your Job Today",
+              const Padding(
+                padding: EdgeInsets.only(right: 150),
+                child: Text("Find Your Job Today",
                     style: TextStyle(
                         color: CustomColor.blackprimary,
                         fontSize: 22,

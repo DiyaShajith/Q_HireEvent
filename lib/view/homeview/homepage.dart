@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qhire_event/constants/filtersheet.dart';
 import 'package:qhire_event/constants/custom_color.dart';
 
 class Homepage extends StatefulWidget {
@@ -16,14 +17,14 @@ class _HomepageState extends State<Homepage> {
       backgroundColor: CustomColor.scaffoldbg,
       appBar: AppBar(
         backgroundColor: CustomColor.scaffoldbg,
-        title: Text(
+        title: const Text(
           "LOGO",
           style: TextStyle(
               color: CustomColor.textfieldbg,
               fontSize: 22,
               fontWeight: FontWeight.bold),
         ),
-        actions: [
+        actions: const [
           Row(
             children: [
               Icon(
@@ -68,22 +69,22 @@ class _HomepageState extends State<Homepage> {
                           height: 50,
                           child: TextField(
                             decoration: InputDecoration(
-                                suffixIcon: Icon(
+                                suffixIcon: const Icon(
                                   Icons.keyboard_voice,
                                   color: CustomColor.textfieldbg,
                                 ),
-                                prefixIcon: Icon(
+                                prefixIcon: const Icon(
                                   Icons.search,
                                   color: CustomColor.textfieldbg,
                                 ),
                                 hintText: "Job title, Keyboard, or Company",
-                                hintStyle: TextStyle(
+                                hintStyle: const TextStyle(
                                     color: CustomColor.uploadbg,
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400),
                                 border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(12),
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                         color: CustomColor.textfieldbg1,
                                         width: 0.5))),
                           ),
@@ -92,17 +93,26 @@ class _HomepageState extends State<Homepage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        width: size.width * 0.1,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                              color: CustomColor.textfieldbg1, width: 1.5),
-                        ),
-                        child: Icon(
-                          Icons.tune,
-                          color: CustomColor.textfieldbg,
+                      InkWell(
+                        onTap: () {
+                          showModalBottomSheet(
+                            isScrollControlled: true,
+                            context: context,
+                            builder: (context) => const Filtersheet(),
+                          );
+                        },
+                        child: Container(
+                          width: size.width * 0.1,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                                color: CustomColor.textfieldbg1, width: 1.5),
+                          ),
+                          child: const Icon(
+                            Icons.tune,
+                            color: CustomColor.textfieldbg,
+                          ),
                         ),
                       )
                     ],
@@ -110,14 +120,14 @@ class _HomepageState extends State<Homepage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Icon(
                         Icons.location_on,
                         color: CustomColor.textfieldbg,
                         size: 32,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 10,
                       ),
                       Text(
@@ -146,7 +156,7 @@ class _HomepageState extends State<Homepage> {
                               borderRadius: BorderRadius.circular(20),
                               color: CustomColor.textfieldbg1.withOpacity(0.2),
                             ),
-                            child: Row(
+                            child: const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Icon(
@@ -173,7 +183,7 @@ class _HomepageState extends State<Homepage> {
                               borderRadius: BorderRadius.circular(20),
                               color: CustomColor.textfieldbg1.withOpacity(0.2),
                             ),
-                            child: Row(
+                            child: const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Icon(
@@ -200,7 +210,7 @@ class _HomepageState extends State<Homepage> {
                               borderRadius: BorderRadius.circular(20),
                               color: CustomColor.textfieldbg1.withOpacity(0.2),
                             ),
-                            child: Row(
+                            child: const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Icon(
@@ -234,12 +244,12 @@ class _HomepageState extends State<Homepage> {
                 child: Row(
                   children: [
                     Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       width: size.width * 0.15,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           color: CustomColor.buttonclr),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "All",
                           style: TextStyle(
@@ -253,13 +263,13 @@ class _HomepageState extends State<Homepage> {
                       width: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       width: size.width * 0.25,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
                               color: CustomColor.buttonclr, width: 1)),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Part Time",
                           style: TextStyle(
@@ -273,13 +283,13 @@ class _HomepageState extends State<Homepage> {
                       width: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       width: size.width * 0.25,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
                               color: CustomColor.buttonclr, width: 1)),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Full Time",
                           style: TextStyle(
@@ -293,13 +303,13 @@ class _HomepageState extends State<Homepage> {
                       width: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       width: size.width * 0.25,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
                               color: CustomColor.buttonclr, width: 1)),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Freelance",
                           style: TextStyle(
@@ -313,13 +323,13 @@ class _HomepageState extends State<Homepage> {
                       width: 10,
                     ),
                     Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       width: size.width * 0.25,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
                               color: CustomColor.buttonclr, width: 1)),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           "Remote",
                           style: TextStyle(
@@ -336,9 +346,9 @@ class _HomepageState extends State<Homepage> {
             const SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.all(6),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.all(6),
+              child: Text(
                 "Recommended For You",
                 style: TextStyle(
                     color: CustomColor.blackprimary,
@@ -353,7 +363,7 @@ class _HomepageState extends State<Homepage> {
                 child: Row(
                   children: [
                     Container(
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       width: size.width * 0.85,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
@@ -363,32 +373,32 @@ class _HomepageState extends State<Homepage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               CircleAvatar(
                                 radius: 35,
                                 backgroundImage:
                                     AssetImage("assets/softronics.png"),
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 width: 20,
                               ),
-                              const Text(
+                              Text(
                                 "Softroniics\nUI/UX Designer",
                                 style: TextStyle(
                                     color: CustomColor.blackprimary,
                                     fontSize: 18,
                                     fontWeight: FontWeight.w500),
                               ),
-                              const Spacer(),
-                              const Icon(
+                              Spacer(),
+                              Icon(
                                 Icons.bookmark_border,
                                 color: CustomColor.textfieldbg,
                                 size: 45,
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           const Text(
@@ -401,7 +411,7 @@ class _HomepageState extends State<Homepage> {
                           const SizedBox(
                             height: 10,
                           ),
-                          Row(
+                          const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
@@ -448,7 +458,7 @@ class _HomepageState extends State<Homepage> {
                                 backgroundColor: CustomColor.textfieldbg,
                               ),
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "Apply",
                                 style: TextStyle(
                                     color: CustomColor.scaffoldbg,
@@ -464,7 +474,7 @@ class _HomepageState extends State<Homepage> {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(12),
+                          padding: const EdgeInsets.all(12),
                           width: size.width * 0.85,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16),
@@ -474,32 +484,32 @@ class _HomepageState extends State<Homepage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Row(
+                              const Row(
                                 children: [
                                   CircleAvatar(
                                     radius: 35,
                                     backgroundImage:
                                         AssetImage("assets/softronics.png"),
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 20,
                                   ),
-                                  const Text(
+                                  Text(
                                     "Softroniics\nHR",
                                     style: TextStyle(
                                         color: CustomColor.blackprimary,
                                         fontSize: 18,
                                         fontWeight: FontWeight.w500),
                                   ),
-                                  const Spacer(),
-                                  const Icon(
+                                  Spacer(),
+                                  Icon(
                                     Icons.bookmark_border,
                                     color: CustomColor.textfieldbg,
                                     size: 45,
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               const Text(
@@ -512,7 +522,7 @@ class _HomepageState extends State<Homepage> {
                               const SizedBox(
                                 height: 10,
                               ),
-                              Row(
+                              const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
@@ -560,7 +570,7 @@ class _HomepageState extends State<Homepage> {
                                     backgroundColor: CustomColor.textfieldbg,
                                   ),
                                   onPressed: () {},
-                                  child: Text(
+                                  child: const Text(
                                     "Apply",
                                     style: TextStyle(
                                         color: CustomColor.scaffoldbg,
@@ -578,7 +588,7 @@ class _HomepageState extends State<Homepage> {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(12),
+                          padding: const EdgeInsets.all(12),
                           width: size.width * 0.85,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16),
@@ -588,32 +598,32 @@ class _HomepageState extends State<Homepage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Row(
+                              const Row(
                                 children: [
                                   CircleAvatar(
                                     radius: 35,
                                     backgroundImage:
                                         AssetImage("assets/softronics.png"),
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 20,
                                   ),
-                                  const Text(
+                                  Text(
                                     "Softroniics\nUI/UX Designer",
                                     style: TextStyle(
                                         color: CustomColor.blackprimary,
                                         fontSize: 18,
                                         fontWeight: FontWeight.w500),
                                   ),
-                                  const Spacer(),
-                                  const Icon(
+                                  Spacer(),
+                                  Icon(
                                     Icons.bookmark_border,
                                     color: CustomColor.textfieldbg,
                                     size: 45,
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               const Text(
@@ -626,7 +636,7 @@ class _HomepageState extends State<Homepage> {
                               const SizedBox(
                                 height: 10,
                               ),
-                              Row(
+                              const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
@@ -674,7 +684,7 @@ class _HomepageState extends State<Homepage> {
                                     backgroundColor: CustomColor.textfieldbg,
                                   ),
                                   onPressed: () {},
-                                  child: Text(
+                                  child: const Text(
                                     "Apply",
                                     style: TextStyle(
                                         color: CustomColor.scaffoldbg,
@@ -692,7 +702,7 @@ class _HomepageState extends State<Homepage> {
                     Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(12),
+                          padding: const EdgeInsets.all(12),
                           width: size.width * 0.85,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16),
@@ -702,32 +712,32 @@ class _HomepageState extends State<Homepage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Row(
+                              const Row(
                                 children: [
                                   CircleAvatar(
                                     radius: 35,
                                     backgroundImage:
                                         AssetImage("assets/softronics.png"),
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 20,
                                   ),
-                                  const Text(
+                                  Text(
                                     "Softroniics\nHR",
                                     style: TextStyle(
                                         color: CustomColor.blackprimary,
                                         fontSize: 18,
                                         fontWeight: FontWeight.w500),
                                   ),
-                                  const Spacer(),
-                                  const Icon(
+                                  Spacer(),
+                                  Icon(
                                     Icons.bookmark_border,
                                     color: CustomColor.textfieldbg,
                                     size: 45,
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 20,
                               ),
                               const Text(
@@ -740,7 +750,7 @@ class _HomepageState extends State<Homepage> {
                               const SizedBox(
                                 height: 10,
                               ),
-                              Row(
+                              const Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
@@ -788,7 +798,7 @@ class _HomepageState extends State<Homepage> {
                                     backgroundColor: CustomColor.textfieldbg,
                                   ),
                                   onPressed: () {},
-                                  child: Text(
+                                  child: const Text(
                                     "Apply",
                                     style: TextStyle(
                                         color: CustomColor.scaffoldbg,
@@ -807,9 +817,9 @@ class _HomepageState extends State<Homepage> {
             const SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.all(6),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.all(6),
+              child: Text(
                 "Featured Jobs",
                 style: TextStyle(
                     color: CustomColor.blackprimary,
@@ -831,13 +841,13 @@ class _HomepageState extends State<Homepage> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     width: size.width * 0.3,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(18),
                         border:
                             Border.all(color: CustomColor.buttonclr, width: 1)),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "3 days ago",
                         style: TextStyle(
@@ -850,8 +860,8 @@ class _HomepageState extends State<Homepage> {
                   Row(
                     children: [
                       Image.asset("assets/Amazon (1).png"),
-                      Padding(
-                        padding: const EdgeInsets.all(16),
+                      const Padding(
+                        padding: EdgeInsets.all(16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -862,7 +872,7 @@ class _HomepageState extends State<Homepage> {
                                   fontSize: 25,
                                   fontWeight: FontWeight.w600),
                             ),
-                            const Text(
+                            Text(
                               "Amazon",
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
@@ -874,7 +884,7 @@ class _HomepageState extends State<Homepage> {
                       )
                     ],
                   ),
-                  Align(
+                  const Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       "California, USA.",
@@ -890,13 +900,13 @@ class _HomepageState extends State<Homepage> {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         width: size.width * 0.25,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(
                                 color: CustomColor.buttonclr, width: 1)),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             "Full Time",
                             style: TextStyle(
@@ -915,7 +925,7 @@ class _HomepageState extends State<Homepage> {
                             backgroundColor: CustomColor.textfieldbg,
                           ),
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             "Apply",
                             style: TextStyle(
                                 color: CustomColor.scaffoldbg,
@@ -941,13 +951,13 @@ class _HomepageState extends State<Homepage> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     width: size.width * 0.3,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(18),
                         border:
                             Border.all(color: CustomColor.buttonclr, width: 1)),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Today",
                         style: TextStyle(
@@ -960,8 +970,8 @@ class _HomepageState extends State<Homepage> {
                   Row(
                     children: [
                       Image.asset("assets/Uber App (1).png"),
-                      Padding(
-                        padding: const EdgeInsets.all(16),
+                      const Padding(
+                        padding: EdgeInsets.all(16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -972,7 +982,7 @@ class _HomepageState extends State<Homepage> {
                                   fontSize: 25,
                                   fontWeight: FontWeight.w600),
                             ),
-                            const Text(
+                            Text(
                               "Uber",
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
@@ -984,9 +994,9 @@ class _HomepageState extends State<Homepage> {
                       )
                     ],
                   ),
-                  Align(
+                  const Align(
                     alignment: Alignment.topLeft,
-                    child: const Text(
+                    child: Text(
                       "Bangalore",
                       style: TextStyle(
                           color: CustomColor.uploadbg,
@@ -1006,8 +1016,8 @@ class _HomepageState extends State<Homepage> {
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(
                                 color: CustomColor.buttonclr, width: 1)),
-                        child: Center(
-                          child: const Text(
+                        child: const Center(
+                          child: Text(
                             "Internship",
                             style: TextStyle(
                                 color: CustomColor.blackprimary,
@@ -1025,7 +1035,7 @@ class _HomepageState extends State<Homepage> {
                             backgroundColor: CustomColor.textfieldbg,
                           ),
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             "Apply",
                             style: TextStyle(
                                 color: CustomColor.scaffoldbg,

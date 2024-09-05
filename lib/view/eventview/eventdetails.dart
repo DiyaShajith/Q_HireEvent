@@ -29,19 +29,19 @@ class _EventdetailsState extends State<Eventdetails> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(16),
+            const Padding(
+              padding: EdgeInsets.all(16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     "Tech Conference 2024\nAug 15, 2024",
                     style: TextStyle(
                         color: CustomColor.blackprimary,
                         fontSize: 25,
                         fontWeight: FontWeight.bold),
                   ),
-                  const Icon(
+                  Icon(
                     Icons.bookmark_border_outlined,
                     color: CustomColor.textfieldbg,
                     size: 40,
@@ -76,19 +76,19 @@ class _EventdetailsState extends State<Eventdetails> {
             const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               // mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Icon(
+                Icon(
                   Icons.location_on,
                   color: CustomColor.textfieldbg,
                   size: 32,
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 10,
                 ),
                 Expanded(
-                  child: const Text(
+                  child: Text(
                     "Tech Hall, Silicon Valley, Map and Directions",
                     style: TextStyle(
                         color: CustomColor.uploadbg,
@@ -101,18 +101,18 @@ class _EventdetailsState extends State<Eventdetails> {
             const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               // mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Icon(
+                Icon(
                   Icons.access_time_filled_outlined,
                   color: CustomColor.textfieldbg,
                   size: 32,
                 ),
-                const SizedBox(
+                SizedBox(
                   width: 10,
                 ),
-                const Text(
+                Text(
                   "Time : 11 AM",
                   style: TextStyle(
                       color: CustomColor.uploadbg,

@@ -76,7 +76,7 @@ class _Screen1State extends State<Screen1> {
                           backgroundColor: CustomColor.scaffoldbg),
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Login()));
+                            MaterialPageRoute(builder: (context) => const Login()));
                       },
                       child: const Text(
                         "I'm a Job Seeker",

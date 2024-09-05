@@ -84,7 +84,7 @@ class _Startpage2State extends State<Startpage2> {
                           backgroundColor: CustomColor.textfieldbg),
                       onPressed: () {
                         widget.pageController.nextPage(
-                            duration: Duration(milliseconds: 5),
+                            duration: const Duration(milliseconds: 5),
                             curve: Curves.easeIn);
                       },
                       child: const Text(

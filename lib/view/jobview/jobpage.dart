@@ -30,12 +30,12 @@ class _JobpageState extends State<Jobpage> {
         backgroundColor: CustomColor.scaffoldbg,
         leading: IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: CustomColor.blackprimary,
               size: 32,
             )),
-        title: Text(
+        title: const Text(
           "Saved Jobs",
           style: TextStyle(
               color: CustomColor.blackprimary,

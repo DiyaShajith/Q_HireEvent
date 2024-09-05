@@ -85,7 +85,7 @@ class _Startpage3State extends State<Startpage3> {
                           backgroundColor: CustomColor.textfieldbg),
                       onPressed: () {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Screen1()));
+                            MaterialPageRoute(builder: (context) => const Screen1()));
                       },
                       child: const Text(
                         "Get started!",

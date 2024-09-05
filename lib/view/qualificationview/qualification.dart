@@ -19,7 +19,7 @@ class _QualificationState extends State<Qualification> {
         backgroundColor: CustomColor.scaffoldbg,
         leading: IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: CustomColor.blackprimary,
               size: 32,
@@ -41,7 +41,7 @@ class _QualificationState extends State<Qualification> {
           Padding(
             padding: const EdgeInsets.all(16),
             child: Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               width: size.width,
               decoration: BoxDecoration(
                   border: Border.all(
@@ -49,34 +49,34 @@ class _QualificationState extends State<Qualification> {
                     width: 0.5,
                   ),
                   borderRadius: BorderRadius.circular(15)),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
-                      const Text(
+                      Text(
                         "Diploma in Multi Media",
                         style: TextStyle(
                             color: CustomColor.blackprimary,
                             fontWeight: FontWeight.w500,
                             fontSize: 22),
                       ),
-                      const Spacer(),
-                      const Icon(
+                      Spacer(),
+                      Icon(
                         Icons.edit_rounded,
                         color: CustomColor.textfieldbg,
                         size: 28,
                       ),
                     ],
                   ),
-                  const Text(
+                  Text(
                     "Vis College Calicut",
                     style: TextStyle(
                         fontSize: 18,
                         color: CustomColor.blackprimary,
                         fontWeight: FontWeight.w500),
                   ),
-                  const Text(
+                  Text(
                     "2022-2023",
                     style: TextStyle(
                         fontSize: 18,
@@ -90,7 +90,7 @@ class _QualificationState extends State<Qualification> {
           Padding(
             padding: const EdgeInsets.all(16),
             child: Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               width: size.width,
               decoration: BoxDecoration(
                   border: Border.all(
@@ -98,34 +98,34 @@ class _QualificationState extends State<Qualification> {
                     width: 0.5,
                   ),
                   borderRadius: BorderRadius.circular(15)),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
-                      const Text(
+                      Text(
                         "Bachelors of Design",
                         style: TextStyle(
                             color: CustomColor.blackprimary,
                             fontWeight: FontWeight.w500,
                             fontSize: 22),
                       ),
-                      const Spacer(),
-                      const Icon(
+                      Spacer(),
+                      Icon(
                         Icons.edit_rounded,
                         color: CustomColor.textfieldbg,
                         size: 28,
                       ),
                     ],
                   ),
-                  const Text(
+                  Text(
                     "Design University of Calicut",
                     style: TextStyle(
                         fontSize: 18,
                         color: CustomColor.blackprimary,
                         fontWeight: FontWeight.w500),
                   ),
-                  const Text(
+                  Text(
                     "2019-2021",
                     style: TextStyle(
                         fontSize: 18,
@@ -148,12 +148,12 @@ class _QualificationState extends State<Qualification> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Addqualification()));
+                            builder: (context) => const Addqualification()));
                   },
                   child: Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     width: double.infinity,
-                    child: Icon(
+                    child: const Icon(
                       Icons.add_box_outlined,
                       color: CustomColor.textfieldbg,
                       size: 30,

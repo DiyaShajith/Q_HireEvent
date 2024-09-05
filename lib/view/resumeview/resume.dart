@@ -19,7 +19,7 @@ class _ResumeState extends State<Resume> {
         backgroundColor: CustomColor.scaffoldbg,
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: CustomColor.blackprimary,
             size: 32,
@@ -48,10 +48,10 @@ class _ResumeState extends State<Resume> {
                   child: Container(
                       padding: const EdgeInsets.all(5),
                       width: double.infinity,
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text(
+                          Text(
                             "Upload Different File",
                             style: TextStyle(
                                 color: CustomColor.blackprimary,

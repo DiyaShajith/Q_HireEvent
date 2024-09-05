@@ -24,7 +24,7 @@ class _AddqualificationState extends State<Addqualification> {
         backgroundColor: CustomColor.scaffoldbg,
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: CustomColor.blackprimary,
             size: 32,
@@ -58,7 +58,7 @@ class _AddqualificationState extends State<Addqualification> {
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: CustomColor.textfieldbg1,
                           width: 0.5,
                         ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
-import 'package:qhire_event/view/getstarted/startpage2.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Startpage1 extends StatefulWidget {
@@ -85,7 +84,7 @@ class _Startpage1State extends State<Startpage1> {
                           backgroundColor: CustomColor.textfieldbg),
                       onPressed: () {
                         widget.pageController.nextPage(
-                            duration: Duration(milliseconds: 5),
+                            duration: const Duration(milliseconds: 5),
                             curve: Curves.easeIn);
                       },
                       child: const Text(

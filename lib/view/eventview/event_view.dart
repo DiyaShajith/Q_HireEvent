@@ -14,7 +14,7 @@ class EventView extends StatelessWidget {
         child: Scaffold(
           backgroundColor: CustomColor.scaffoldbg,
           appBar: AppBar(
-            title: Text("Event"),
+            title: const Text("Event"),
           ),
           body: Column(
             children: [
@@ -62,7 +62,7 @@ class EventView extends StatelessWidget {
                       ),
                     ),
                   ]),
-              Expanded(
+              const Expanded(
                   child: TabBarView(children: [
                 Eventupcoming(),
                 Eventcancelled(),

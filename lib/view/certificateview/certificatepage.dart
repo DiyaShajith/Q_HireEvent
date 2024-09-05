@@ -19,7 +19,7 @@ class _CertificatepageState extends State<Certificatepage> {
         backgroundColor: CustomColor.scaffoldbg,
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: CustomColor.blackprimary,
             size: 32,
@@ -52,28 +52,28 @@ class _CertificatepageState extends State<Certificatepage> {
                   const SizedBox(
                     width: 15,
                   ),
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const SizedBox(
+                      SizedBox(
                         height: 25,
                       ),
-                      const Text(
+                      Text(
                         "Fundamentals of UI UX",
                         style: TextStyle(
                             color: CustomColor.blackprimary,
                             fontSize: 19.5,
                             fontWeight: FontWeight.w500),
                       ),
-                      const Text(
+                      Text(
                         "Figma Google",
                         style: TextStyle(
                             color: CustomColor.blackprimary,
                             fontSize: 19.5,
                             fontWeight: FontWeight.w500),
                       ),
-                      const Text(
+                      Text(
                         "Certificates",
                         style: TextStyle(
                             color: CustomColor.blackprimary,
@@ -103,14 +103,14 @@ class _CertificatepageState extends State<Certificatepage> {
                   const SizedBox(
                     width: 15,
                   ),
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const SizedBox(
+                      SizedBox(
                         height: 25,
                       ),
-                      const Text(
+                      Text(
                         "Google UX Designer",
                         style: TextStyle(
                             color: CustomColor.blackprimary,
@@ -137,7 +137,7 @@ class _CertificatepageState extends State<Certificatepage> {
                     child: Container(
                       padding: const EdgeInsets.all(5),
                       width: double.infinity,
-                      child: Icon(
+                      child: const Icon(
                         Icons.add_box_outlined,
                         color: CustomColor.textfieldbg,
                         size: 30,

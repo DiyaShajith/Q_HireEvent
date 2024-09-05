@@ -18,7 +18,7 @@ class _SkillState extends State<Skill> {
         backgroundColor: CustomColor.scaffoldbg,
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: CustomColor.blackprimary,
             size: 32,
@@ -37,8 +37,8 @@ class _SkillState extends State<Skill> {
           const SizedBox(
             height: 20,
           ),
-          TextField(
-            decoration: const InputDecoration(
+          const TextField(
+            decoration: InputDecoration(
                 suffixIcon: Icon(
                   Icons.add_box_outlined,
                   color: CustomColor.textfieldbg,
@@ -53,7 +53,7 @@ class _SkillState extends State<Skill> {
                     borderSide: BorderSide(
                         color: CustomColor.textfieldbg1, width: 0.5))),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           SingleChildScrollView(
@@ -70,7 +70,7 @@ class _SkillState extends State<Skill> {
                       borderRadius: BorderRadius.circular(20),
                       color: CustomColor.textfieldbg1,
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
@@ -97,7 +97,7 @@ class _SkillState extends State<Skill> {
                       borderRadius: BorderRadius.circular(20),
                       color: CustomColor.textfieldbg1,
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
@@ -124,7 +124,7 @@ class _SkillState extends State<Skill> {
                       borderRadius: BorderRadius.circular(20),
                       color: CustomColor.textfieldbg1,
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(

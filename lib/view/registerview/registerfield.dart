@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/bottomnavigationpage.dart';
 import 'package:qhire_event/constants/custom_color.dart';
-import 'package:qhire_event/view/homeview/homepage.dart';
 
 class Registerfield extends StatefulWidget {
   const Registerfield({super.key});
@@ -103,7 +102,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                 ))),
                       ),
@@ -132,7 +131,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                 ))),
                       ),
@@ -161,7 +160,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                 ))),
                       ),
@@ -190,7 +189,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                 ))),
                       ),
@@ -224,7 +223,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                 ))),
                       ),
@@ -258,7 +257,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                 ))),
                       ),
@@ -287,7 +286,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                 ))),
                       ),
@@ -321,7 +320,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                 ))),
                       ),
@@ -355,7 +354,7 @@ class _RegisterfieldState extends State<Registerfield> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.grey,
                                 ))),
                       ),
@@ -509,7 +508,7 @@ class _RegisterfieldState extends State<Registerfield> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          Bottomnavigationpage()));
+                                          const Bottomnavigationpage()));
                             },
                             child: const Text(
                               "Register",

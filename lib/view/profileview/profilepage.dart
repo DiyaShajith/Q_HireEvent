@@ -55,19 +55,19 @@ class ProfileView extends StatelessWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 50),
-                      Text("Rohit",
+                      const Text("Rohit",
                           style: TextStyle(
                               color: CustomColor.blackprimary,
                               fontSize: 40,
                               fontWeight: FontWeight.bold)),
-                      Text(
+                      const Text(
                         "UI/UX Designer",
                         style: TextStyle(
                             color: CustomColor.uploadbg,
                             fontSize: 20,
                             fontWeight: FontWeight.w400),
                       ),
-                      Text(
+                      const Text(
                         "rohit007@gmail.com",
                         style: TextStyle(
                             color: CustomColor.uploadbg,
@@ -89,7 +89,7 @@ class ProfileView extends StatelessWidget {
                           children: [
                             Image.asset("assets/uil_edit.png"),
                             const SizedBox(width: 50), // Adjusted to width
-                            Text(
+                            const Text(
                               "Profile",
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
@@ -102,9 +102,9 @@ class ProfileView extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Editpage()));
+                                        builder: (context) => const Editpage()));
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.keyboard_arrow_right,
                                 color: CustomColor.blackprimary,
                                 size: 40,
@@ -128,7 +128,7 @@ class ProfileView extends StatelessWidget {
                           children: [
                             Image.asset("assets/emojione_graduation-cap.png"),
                             const SizedBox(width: 50), // Adjusted to width
-                            Text(
+                            const Text(
                               "Qualification",
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
@@ -141,9 +141,9 @@ class ProfileView extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Qualification()));
+                                        builder: (context) => const Qualification()));
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.keyboard_arrow_right,
                                 color: CustomColor.blackprimary,
                                 size: 40,
@@ -168,7 +168,7 @@ class ProfileView extends StatelessWidget {
                             Image.asset(
                                 "assets/fluent_certificate-20-regular.png"),
                             const SizedBox(width: 50), // Adjusted to width
-                            Text(
+                            const Text(
                               "Certifications",
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
@@ -182,9 +182,9 @@ class ProfileView extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            Certificatepage()));
+                                            const Certificatepage()));
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.keyboard_arrow_right,
                                 color: CustomColor.blackprimary,
                                 size: 40,
@@ -208,7 +208,7 @@ class ProfileView extends StatelessWidget {
                           children: [
                             Image.asset("assets/mdi_head-cog-outline.png"),
                             const SizedBox(width: 50), // Adjusted to width
-                            Text(
+                            const Text(
                               "Skills",
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
@@ -221,9 +221,9 @@ class ProfileView extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Skill()));
+                                        builder: (context) => const Skill()));
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.keyboard_arrow_right,
                                 color: CustomColor.blackprimary,
                                 size: 40,
@@ -247,7 +247,7 @@ class ProfileView extends StatelessWidget {
                           children: [
                             Image.asset("assets/pepicons-pencil_cv.png"),
                             const SizedBox(width: 50), // Adjusted to width
-                            Text(
+                            const Text(
                               "Resume",
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
@@ -260,9 +260,9 @@ class ProfileView extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Resume()));
+                                        builder: (context) => const Resume()));
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.keyboard_arrow_right,
                                 color: CustomColor.blackprimary,
                                 size: 40,
@@ -287,7 +287,7 @@ class ProfileView extends StatelessWidget {
                             Image.asset(
                                 "assets/fluent_document-table-search-20-filled.png"),
                             const SizedBox(width: 50), // Adjusted to width
-                            Text(
+                            const Text(
                               "View Applied Jobs",
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
@@ -300,9 +300,9 @@ class ProfileView extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Jobpage()));
+                                        builder: (context) => const Jobpage()));
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.keyboard_arrow_right,
                                 color: CustomColor.blackprimary,
                                 size: 40,
@@ -326,7 +326,7 @@ class ProfileView extends StatelessWidget {
                           children: [
                             Image.asset("assets/material-symbols_settings.png"),
                             const SizedBox(width: 50), // Adjusted to width
-                            Text(
+                            const Text(
                               "Settings",
                               style: TextStyle(
                                   color: CustomColor.uploadbg,
@@ -334,7 +334,7 @@ class ProfileView extends StatelessWidget {
                                   fontSize: 19),
                             ),
                             const Spacer(),
-                            Icon(
+                            const Icon(
                               Icons.keyboard_arrow_right,
                               color: CustomColor.blackprimary,
                               size: 40,

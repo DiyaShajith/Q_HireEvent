@@ -30,7 +30,7 @@ class _EditpageState extends State<Editpage> {
         backgroundColor: CustomColor.scaffoldbg,
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: CustomColor.blackprimary,
             size: 32,
@@ -75,11 +75,11 @@ class _EditpageState extends State<Editpage> {
                     child: Container(
                       width: 200,
                       height: 200,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         color: CustomColor.textfieldbg,
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.person,
                         color: CustomColor.scaffoldbg,
                         size: 40,
@@ -95,11 +95,11 @@ class _EditpageState extends State<Editpage> {
                     height: 35,
                     alignment: Alignment.center,
                     padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: CustomColor.textfieldbg,
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.edit,
                       color: CustomColor.scaffoldbg,
                       size: 25,
@@ -126,7 +126,7 @@ class _EditpageState extends State<Editpage> {
                     ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: CustomColor.textfieldbg1,
                         width: 0.5,
                       ),
@@ -161,15 +161,15 @@ class _EditpageState extends State<Editpage> {
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
-                            Icon(
+                            const Icon(
                               Icons.cloud_upload_outlined,
                               color: CustomColor.textfieldbg,
                               size: 50,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             SizedBox(
