@@ -10,6 +10,17 @@ class Registerfield extends StatefulWidget {
 }
 
 class _RegisterfieldState extends State<Registerfield> {
+  String dropdownvalue = "Selected";
+  var items = [
+    "Selected",
+    "Bachelor's Degree",
+    "Masters Degree",
+    "Diploma",
+    "+2"
+  ];
+  String gendervalue = "Selected";
+  var genderItems = ["Selected", "Female", "Male", "Others"];
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
@@ -167,65 +178,111 @@ class _RegisterfieldState extends State<Registerfield> {
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
+                      // Replaced Gender TextField with DropdownButtonFormField
+                      DropdownButtonFormField(
+                        dropdownColor: CustomColor.scaffoldbg,
+                        style: const TextStyle(
+                          color: Color.fromARGB(255, 87, 86, 86),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        value: gendervalue,
                         decoration: InputDecoration(
-                            label: RichText(
-                              text: const TextSpan(
-                                text: "Gender",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' *',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                    ),
-                                  ),
-                                ],
+                          label: RichText(
+                            text: const TextSpan(
+                              text: "Gender",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 87, 86, 86),
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
                               ),
+                              children: [
+                                TextSpan(
+                                  text: ' *',
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ],
                             ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                  color: Colors.grey,
-                                ))),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: const BorderSide(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ),
+                        icon: const Icon(
+                          Icons.keyboard_arrow_down,
+                          size: 35,
+                          color: CustomColor.blackprimary,
+                        ),
+                        items: genderItems.map((String item) {
+                          return DropdownMenuItem(
+                            value: item,
+                            child: Text(item),
+                          );
+                        }).toList(),
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            gendervalue = newValue!;
+                          });
+                        },
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
+                      DropdownButtonFormField(
+                        dropdownColor: CustomColor.scaffoldbg,
+                        style: const TextStyle(
+                          color: Color.fromARGB(255, 87, 86, 86),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        value: dropdownvalue,
                         decoration: InputDecoration(
-                            suffixIcon: const Icon(
-                              Icons.keyboard_arrow_down,
-                              size: 35,
-                              color: CustomColor.blackprimary,
-                            ),
-                            label: RichText(
-                              text: const TextSpan(
-                                text: "Qualification",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' *',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                    ),
-                                  ),
-                                ],
+                          label: RichText(
+                            text: const TextSpan(
+                              text: "Qualification",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 87, 86, 86),
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
                               ),
+                              children: [
+                                TextSpan(
+                                  text: ' *',
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ],
                             ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                  color: Colors.grey,
-                                ))),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: const BorderSide(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ),
+                        icon: const Icon(
+                          Icons.keyboard_arrow_down,
+                          size: 35,
+                          color: CustomColor.blackprimary,
+                        ),
+                        items: items.map((String item) {
+                          return DropdownMenuItem(
+                            value: item,
+                            child: Text(item),
+                          );
+                        }).toList(),
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownvalue = newValue!;
+                          });
+                        },
                       ),
                       const SizedBox(
                         height: 20,
@@ -359,7 +416,7 @@ class _RegisterfieldState extends State<Registerfield> {
                                 ))),
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 25,
                       ),
                       Row(
                         children: [
@@ -367,9 +424,9 @@ class _RegisterfieldState extends State<Registerfield> {
                             text: const TextSpan(
                               text: "Upload Photograph",
                               style: TextStyle(
-                                color: Color.fromARGB(255, 70, 69, 69),
+                                color: CustomColor.blackprimary,
                                 fontSize: 18,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                               ),
                               children: [
                                 TextSpan(
@@ -434,9 +491,9 @@ class _RegisterfieldState extends State<Registerfield> {
                             text: const TextSpan(
                               text: "Upload Resume",
                               style: TextStyle(
-                                color: Color.fromARGB(255, 70, 69, 69),
+                                color: CustomColor.blackprimary,
                                 fontSize: 18,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                               ),
                               children: [
                                 TextSpan(
@@ -493,30 +550,30 @@ class _RegisterfieldState extends State<Registerfield> {
                         ),
                       ),
                       const SizedBox(
-                        height: 50,
+                        height: 25,
                       ),
-                      SizedBox(
-                        width: size.width,
-                        height: 60,
-                        child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(16)),
-                                backgroundColor: CustomColor.textfieldbg),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const Bottomnavigationpage()));
-                            },
-                            child: const Text(
-                              "Register",
-                              style: TextStyle(
-                                  color: CustomColor.scaffoldbg,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
-                            )),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const Bottomnavigationpage()));
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          minimumSize: Size(size.width * 0.85, 60),
+                          backgroundColor: CustomColor.textfieldbg,
+                        ),
+                        child: const Text(
+                          "Register",
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                       const SizedBox(
                         height: 100,
