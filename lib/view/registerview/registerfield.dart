@@ -20,6 +20,22 @@ class _RegisterfieldState extends State<Registerfield> {
   ];
   String gendervalue = "Selected";
   var genderItems = ["Selected", "Female", "Male", "Others"];
+  String expertisecalue = "Selected";
+  var expertiseItems = [
+    "UI/UX",
+    "Python",
+    "Machine Learning",
+    "Digital Marketing",
+    "Product Management",
+    "Frotend",
+    "Backend",
+    "Full Stack",
+    "Mobile App Development",
+    "iOS",
+    "Web Development",
+    "React",
+    "Java"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -384,36 +400,49 @@ class _RegisterfieldState extends State<Registerfield> {
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
+                      DropdownButtonFormField<String>(
+                        dropdownColor: CustomColor.scaffoldbg,
                         decoration: InputDecoration(
-                            suffixIcon: const Icon(
-                              Icons.keyboard_arrow_down,
-                              size: 35,
-                              color: CustomColor.blackprimary,
-                            ),
-                            label: RichText(
-                              text: const TextSpan(
-                                text: "Area of Expertise",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' *',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                    ),
-                                  ),
-                                ],
+                          label: RichText(
+                            text: const TextSpan(
+                              text: "Area of Expertise",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 87, 86, 86),
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
                               ),
+                              children: [
+                                TextSpan(
+                                  text: ' *',
+                                  style: TextStyle(
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ],
                             ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                  color: Colors.grey,
-                                ))),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: const BorderSide(
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ),
+                        items: expertiseItems
+                            .map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                        onChanged: (String? newValue) {
+                          // Handle the change here
+                        },
+                        icon: const Icon(
+                          Icons.keyboard_arrow_down,
+                          size: 35,
+                          color: CustomColor.blackprimary,
+                        ),
                       ),
                       const SizedBox(
                         height: 25,
