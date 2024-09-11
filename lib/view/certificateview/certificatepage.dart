@@ -18,7 +18,9 @@ class _CertificatepageState extends State<Certificatepage> {
       appBar: AppBar(
         backgroundColor: CustomColor.scaffoldbg,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(
             Icons.arrow_back,
             color: CustomColor.blackprimary,
