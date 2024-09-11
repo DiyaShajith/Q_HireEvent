@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/bottomnavigationpage.dart';
 import 'package:qhire_event/constants/custom_color.dart';
+import 'package:qhire_event/res/components/common/custom_dropdown.dart';
+import 'package:qhire_event/res/components/common/custom_textformfield.dart';
 
 class Registerfield extends StatefulWidget {
   const Registerfield({super.key});
@@ -20,7 +22,7 @@ class _RegisterfieldState extends State<Registerfield> {
   ];
   String gendervalue = "Selected";
   var genderItems = ["Selected", "Female", "Male", "Others"];
-  String expertisecalue = "Selected";
+  String expertisevalue = "Selected";
   var expertiseItems = [
     "UI/UX",
     "Python",
@@ -36,7 +38,30 @@ class _RegisterfieldState extends State<Registerfield> {
     "React",
     "Java"
   ];
-
+  String experiencevalue = "Selected";
+  var experienceitems = [
+    "0-1 years",
+    "2+ years",
+    "5+ years",
+    "No prior work related experience"
+  ];
+  String districtvalue = "Selected";
+  var districtitems = [
+    "Thiruvananthapuram",
+    "Kollam",
+    "Pathanamthitta",
+    "Alappuzha",
+    "Kottayam",
+    "Idukki",
+    "Ernakulam",
+    "Thrissur",
+    "Palakkad",
+    "Malappuram",
+    "Kozhikode",
+    "Wayanad",
+    "Kannur",
+    "Kasaragod"
+  ];
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
@@ -107,342 +132,66 @@ class _RegisterfieldState extends State<Registerfield> {
                       const SizedBox(
                         height: 30,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                            label: RichText(
-                              text: const TextSpan(
-                                text: "Full name",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' *',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                  color: Colors.grey,
-                                ))),
+                      const CustomTextformfield(
+                        isRequired: true,
+                        label: "Full name",
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                            label: RichText(
-                              text: const TextSpan(
-                                text: "Mobile Number",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' *',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                  color: Colors.grey,
-                                ))),
+                      const CustomTextformfield(
+                        isRequired: true,
+                        label: "Mobile Number",
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                            label: RichText(
-                              text: const TextSpan(
-                                text: "Email",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' *',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                  color: Colors.grey,
-                                ))),
+                      const CustomTextformfield(
+                        isRequired: true,
+                        label: "Email",
                       ),
                       const SizedBox(
                         height: 20,
                       ),
                       // Replaced Gender TextField with DropdownButtonFormField
-                      DropdownButtonFormField(
-                        dropdownColor: CustomColor.scaffoldbg,
-                        style: const TextStyle(
-                          color: Color.fromARGB(255, 87, 86, 86),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        value: gendervalue,
-                        decoration: InputDecoration(
-                          label: RichText(
-                            text: const TextSpan(
-                              text: "Gender",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 87, 86, 86),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              children: [
-                                TextSpan(
-                                  text: ' *',
-                                  style: TextStyle(
-                                    color: Colors.red,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        ),
-                        icon: const Icon(
-                          Icons.keyboard_arrow_down,
-                          size: 35,
-                          color: CustomColor.blackprimary,
-                        ),
-                        items: genderItems.map((String item) {
-                          return DropdownMenuItem(
-                            value: item,
-                            child: Text(item),
-                          );
-                        }).toList(),
-                        onChanged: (String? newValue) {
-                          setState(() {
-                            gendervalue = newValue!;
-                          });
-                        },
+                      CustomDropdown(
+                        label: "Gender",
+                        items: genderItems,
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-                      DropdownButtonFormField(
-                        dropdownColor: CustomColor.scaffoldbg,
-                        style: const TextStyle(
-                          color: Color.fromARGB(255, 87, 86, 86),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        value: dropdownvalue,
-                        decoration: InputDecoration(
-                          label: RichText(
-                            text: const TextSpan(
-                              text: "Qualification",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 87, 86, 86),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              children: [
-                                TextSpan(
-                                  text: ' *',
-                                  style: TextStyle(
-                                    color: Colors.red,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        ),
-                        icon: const Icon(
-                          Icons.keyboard_arrow_down,
-                          size: 35,
-                          color: CustomColor.blackprimary,
-                        ),
-                        items: items.map((String item) {
-                          return DropdownMenuItem(
-                            value: item,
-                            child: Text(item),
-                          );
-                        }).toList(),
-                        onChanged: (String? newValue) {
-                          setState(() {
-                            dropdownvalue = newValue!;
-                          });
-                        },
+                      CustomDropdown(
+                        label: "Qualification",
+                        items: items,
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                            suffixIcon: const Icon(
-                              Icons.keyboard_arrow_down,
-                              size: 35,
-                              color: CustomColor.blackprimary,
-                            ),
-                            label: RichText(
-                              text: const TextSpan(
-                                text: "Experience",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' *',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                  color: Colors.grey,
-                                ))),
+                      CustomDropdown(
+                        label: "Experience",
+                        items: experienceitems,
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                            label: RichText(
-                              text: const TextSpan(
-                                text: "Linkedin Profile",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' *',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                  color: Colors.grey,
-                                ))),
+                      const CustomTextformfield(
+                        isRequired: true,
+                        label: "Linkedin Profile",
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                            suffixIcon: const Icon(
-                              Icons.keyboard_arrow_down,
-                              size: 35,
-                              color: CustomColor.blackprimary,
-                            ),
-                            label: RichText(
-                              text: const TextSpan(
-                                text: "District",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 87, 86, 86),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: ' *',
-                                    style: TextStyle(
-                                      color: Colors.red,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(12),
-                                borderSide: const BorderSide(
-                                  color: Colors.grey,
-                                ))),
+                      CustomDropdown(
+                        label: "District",
+                        items: districtitems,
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-                      DropdownButtonFormField<String>(
-                        dropdownColor: CustomColor.scaffoldbg,
-                        decoration: InputDecoration(
-                          label: RichText(
-                            text: const TextSpan(
-                              text: "Area of Expertise",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 87, 86, 86),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              children: [
-                                TextSpan(
-                                  text: ' *',
-                                  style: TextStyle(
-                                    color: Colors.red,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
-                            borderSide: const BorderSide(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        ),
-                        items: expertiseItems
-                            .map<DropdownMenuItem<String>>((String value) {
-                          return DropdownMenuItem<String>(
-                            value: value,
-                            child: Text(value),
-                          );
-                        }).toList(),
-                        onChanged: (String? newValue) {
-                          // Handle the change here
-                        },
-                        icon: const Icon(
-                          Icons.keyboard_arrow_down,
-                          size: 35,
-                          color: CustomColor.blackprimary,
-                        ),
+                      CustomDropdown(
+                        label: "Area of Expertise",
+                        items: expertiseItems,
                       ),
                       const SizedBox(
                         height: 25,
@@ -603,6 +352,33 @@ class _RegisterfieldState extends State<Registerfield> {
                             color: Colors.white,
                           ),
                         ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Already have an account?",
+                            style: TextStyle(
+                                color: CustomColor.blackprimary,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Text(
+                              "Login",
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: CustomColor.textfieldbg,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       const SizedBox(
                         height: 100,

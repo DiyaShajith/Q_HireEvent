@@ -3,6 +3,7 @@ import 'package:qhire_event/constants/bottomnavigationpage.dart';
 import 'package:qhire_event/constants/filtersheet.dart';
 import 'package:qhire_event/constants/pageview.dart';
 import 'package:qhire_event/view/homeview/homepage.dart';
+import 'package:qhire_event/view/registerview/forgotpasswordview.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
+import 'package:qhire_event/view/registerview/forgotpasswordview.dart';
 import 'package:qhire_event/view/registerview/registerfield.dart';
 
 class Login extends StatefulWidget {
@@ -184,12 +185,21 @@ class _LoginState extends State<Login> {
                                 fontWeight: FontWeight.w400),
                           ),
                           const Spacer(),
-                          const Text(
-                            "Forgot Password?",
-                            style: TextStyle(
-                                color: CustomColor.blackprimary,
-                                fontSize: 17,
-                                fontWeight: FontWeight.w500),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const Forgotpasswordview()));
+                            },
+                            child: const Text(
+                              "Forgot Password?",
+                              style: TextStyle(
+                                  color: CustomColor.blackprimary,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w500),
+                            ),
                           ),
                         ],
                       ),
@@ -254,11 +264,12 @@ class _LoginState extends State<Login> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const Registerfield()));
+                                      builder: (context) =>
+                                          const Registerfield()));
                             },
                             child: const Text("Register",
                                 style: TextStyle(
-                                    color: CustomColor.blackprimary,
+                                    color: CustomColor.textfieldbg,
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold)),
                           ),
