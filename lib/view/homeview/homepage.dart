@@ -869,7 +869,7 @@ class _HomepageState extends State<Homepage> {
                               "UI/UX Designer",
                               style: TextStyle(
                                   color: CustomColor.blackprimary,
-                                  fontSize: 25,
+                                  fontSize: 22,
                                   fontWeight: FontWeight.w600),
                             ),
                             Text(
@@ -890,7 +890,7 @@ class _HomepageState extends State<Homepage> {
                       "California, USA.",
                       style: TextStyle(
                           color: CustomColor.uploadbg,
-                          fontSize: 22,
+                          fontSize: 20,
                           fontWeight: FontWeight.w400),
                     ),
                   ),
@@ -979,7 +979,7 @@ class _HomepageState extends State<Homepage> {
                               "UI/UX Designer",
                               style: TextStyle(
                                   color: CustomColor.blackprimary,
-                                  fontSize: 25,
+                                  fontSize: 22,
                                   fontWeight: FontWeight.w600),
                             ),
                             Text(
@@ -1000,7 +1000,7 @@ class _HomepageState extends State<Homepage> {
                       "Bangalore",
                       style: TextStyle(
                           color: CustomColor.uploadbg,
-                          fontSize: 22,
+                          fontSize: 20,
                           fontWeight: FontWeight.w400),
                     ),
                   ),
