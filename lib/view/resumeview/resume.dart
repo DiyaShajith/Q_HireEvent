@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:dotted_border/dotted_border.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:qhire_event/constants/custom_color.dart';
 
@@ -48,23 +51,35 @@ class _ResumeState extends State<Resume> {
                   child: Container(
                       padding: const EdgeInsets.all(5),
                       width: double.infinity,
-                      child: const Row(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Upload Different File",
                             style: TextStyle(
                                 color: CustomColor.blackprimary,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
-                          Icon(
-                            Icons.file_upload,
-                            color: CustomColor.textfieldbg,
-                            size: 30,
+                          InkWell(
+                            onTap: () async {
+                              FilePickerResult? result =
+                                  await FilePicker.platform.pickFiles();
+
+                              if (result != null) {
+                                File file = File(result.files.single.path!);
+                              } else {
+                                // User canceled the picker
+                              }
+                            },
+                            child: const Icon(
+                              Icons.file_upload,
+                              color: CustomColor.textfieldbg,
+                              size: 30,
+                            ),
                           )
                         ],
                       ))),
