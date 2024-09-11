@@ -9,7 +9,7 @@ class Field extends StatefulWidget {
 }
 
 class _FieldState extends State<Field> {
-  bool value = false;
+  List<bool> selectedValues = List.filled(9, false);
   List title = [
     "Software Developer",
     "Data Scientist",
@@ -21,6 +21,7 @@ class _FieldState extends State<Field> {
     "Product Manager",
     "Mobile App Developer",
   ];
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -29,10 +30,14 @@ class _FieldState extends State<Field> {
       itemBuilder: (context, index) => Row(
         children: [
           Checkbox(
-            value: value,
-            onChanged: (value) {
+            activeColor: CustomColor.textfieldbg,
+            value: selectedValues[index],
+            onChanged: (bool? value) {
               setState(() {
-                this.value = value!;
+                for (int i = 0; i < selectedValues.length; i++) {
+                  selectedValues[i] = false; // Uncheck all other checkboxes
+                }
+                selectedValues[index] = value!; // Check the selected checkbox
               });
             },
           ),

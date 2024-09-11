@@ -9,7 +9,8 @@ class Salary extends StatefulWidget {
 }
 
 class _SalaryState extends State<Salary> {
-  bool value = false;
+  List<bool> selectedValues =
+      List.filled(5, false); // Keep track of each checkbox
   List title = [
     "All Range ",
     "10K - 15K",
@@ -17,6 +18,7 @@ class _SalaryState extends State<Salary> {
     "40K - 50K ",
     "More than 50K",
   ];
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -25,10 +27,14 @@ class _SalaryState extends State<Salary> {
       itemBuilder: (context, index) => Row(
         children: [
           Checkbox(
-            value: value,
-            onChanged: (value) {
+            activeColor: CustomColor.textfieldbg,
+            value: selectedValues[index],
+            onChanged: (bool? value) {
               setState(() {
-                this.value = value!;
+                for (int i = 0; i < selectedValues.length; i++) {
+                  selectedValues[i] = false; // Uncheck all other checkboxes
+                }
+                selectedValues[index] = value!; // Check the selected checkbox
               });
             },
           ),

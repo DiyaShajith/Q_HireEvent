@@ -9,36 +9,42 @@ class Typepage extends StatefulWidget {
 }
 
 class _TypepageState extends State<Typepage> {
-   bool value = false;
-  List title = [
+  List<bool> selectedValues =
+      List.filled(4, false); // Track state for each checkbox
+  List<String> title = [
     "Full-Time",
     "Part-Time",
     "Internship",
     "Freelance",
-    
   ];
+
   @override
   Widget build(BuildContext context) {
-    return  ListView.builder(
+    return ListView.builder(
       itemCount: title.length,
       shrinkWrap: true,
       itemBuilder: (context, index) => Row(
         children: [
           Checkbox(
-            value: value,
-            onChanged: (value) {
+            activeColor: CustomColor.textfieldbg,
+            value: selectedValues[index],
+            onChanged: (bool? value) {
               setState(() {
-                this.value = value!;
+                for (int i = 0; i < selectedValues.length; i++) {
+                  selectedValues[i] = false; // Uncheck all other checkboxes
+                }
+                selectedValues[index] = value!; // Check the selected checkbox
               });
             },
           ),
           Text(
             title[index],
             style: const TextStyle(
-                color: CustomColor.blackprimary,
-                fontSize: 20,
-                fontWeight: FontWeight.w500),
-          )
+              color: CustomColor.blackprimary,
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
         ],
       ),
     );
